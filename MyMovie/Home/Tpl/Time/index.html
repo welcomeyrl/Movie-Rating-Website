@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>My Movie</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link href="__PUBLIC__/front/css/public.css" rel="stylesheet" type="text/css"/>
+		<link href="__PUBLIC__/front/css/bo.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="__PUBLIC__/front/js/move.js"></script>
+		<link rel="stylesheet" href="__PUBLIC__/time/style/documentation.css" type="text/css" />
+		<link rel="stylesheet" href="__PUBLIC__/time/style/jalendar.css" type="text/css" />
+		<script type="text/javascript" src="__PUBLIC__/time/js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/time/js/jalendar.js"></script>
+		<script type="text/javascript">
+			$(function () {
+				$('#myId3').jalendar();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- 页头开始 -->
+		{include file="Public/uhead.html"}
+		<!-- 页头结束 -->
+		
+		<div class="nav"></div>
+		
+		<!-- 主体部分开始	-->
+		<div id="pmain">
+		
+			<!-- 左侧内容 -->
+			<div id="pmain_left">
+				<div id="myId3" class="jalendar mid">
+					{foreach $list as $vo}
+					<div class="added-event" data-date="{$vo.date}" data-title="{$vo.title}"></div>
+					{/foreach}
+				</div>
+			</div>
+		</div>
+		
+		<!-- 主体部分结束	-->
+		
+		<div class="nav"></div>
+		
+		<!-- 导入页脚部分 -->
+		{include file="Public/foot.html"}
+		
+		
+	</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>My Movie</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link href="__PUBLIC__/front/css/public.css" rel="stylesheet" type="text/css"/>
+		<link href="__PUBLIC__/front/css/bo.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="__PUBLIC__/front/js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/front/js/move.js"></script>
+		
+	</head>
+	<body>
+		<!-- 页头开始 -->
+		{include file="Public/uhead.html"}
+		<!-- 页头结束 -->
+		
+		<!-- 主体部分开始	-->
+		<div id="pmain">
+			<div id="albtitle">
+				{$vo.title}
+				{if $smarty.get.uid == $smarty.session.loginuser.id}
+				<button class="btn-submit" style="margin-left:700px;">Manage Ablums</button>
+				{/if}
+			</div>
+			<div class="nav"></div>
+			
+			<div id="albdes">
+				<span>Ablum Description</span>
+				<div class="albcontent">
+					<div class="acthor">
+						<div class="l">
+							<div class="user_pic">
+								<a href="__APP__/User/index/uid/{$vo.uid}">
+									<img width="40" height="40" src="__ROOT__/Uploads/User/Headpic/{$uo.headpic}">
+								</a>
+							</div>
+							<a href="__APP__/User/index/uid/1">
+								{$uo.username}
+							</a>
+							{$vo.addtime|date_format:"%Y-%m-%d %H:%M"}
+						</div>
+					</div>
+					<div class="content">
+						{$vo.content}
+					</div>
+				</div>
+
+			</div>
+			<div class="nav"></div>
+	
+			<div id="albpics">
+			
+				<div id="showPhoto">	<!-- 显示大图 -->
+					<img src="__ROOT__/Public/front/images/close.jpg" id="close">	<!-- 面板中的关闭按钮 -->
+					<div id="showPic"><img></div>
+					<div id="bgblack"></div>	<!-- 用来显示透明的黑色背景 -->
+					<div id="picdescr">
+						
+					</div>
+				</div>
+				{foreach $plist as $p}
+				<div class="thumb ls" {if $p.iscover==1}style="background:green;"{/if}><a href="#"><img src="__ROOT__/Uploads/Photoalbum/Small/s_{$p.picname}"></a></div>
+				<span id={$p.pdesid} style="display:none;">{$p.descr}</span>
+				{/foreach}
+			</div>
+
+			
+		</div>
+		
+		<!-- 主体部分结束	-->
+		
+		<div class="nav"></div>
+		
+		<!-- 导入页脚部分 -->
+		{include file="Public/foot.html"}
+
+		<script language="javascript">
+		$(function(){
+			$("#showPhoto").hide();	//初始化时不显示大图
+			$("#bgblack").css("opacity",0.9);	//显示大图的方块背景设置为透明
+			
+			$("#close").click(function(){
+				//点击按钮close，则关闭大图面板（采用动画）
+				$("#showPhoto").add("#showPic").fadeOut(400);
+			});
+			
+			$("div a:has(img)").click(function(){
+				//如果点击缩略图，则显示大图
+				$("#showPhoto").css({
+					//大图的位置根据窗口来判断
+					"left":($(window).width()/2-300>20?$(window).width()/2-300:20),
+					"top":($(window).height()/2-270>30?$(window).height()/2-270:30)
+				}).add("#showPic").fadeIn(400);
+				//根据缩略图的地址，获取相应的大图地址
+				var mySrc = $(this).find("img").attr("src");
+				
+				mySrcb = "__ROOT__/Uploads/Photoalbum/Big/" + mySrc.substring(mySrc.lastIndexOf("_")+1);
+				$("#showPic").find("img").attr("src",mySrcb);
+				
+				//获得该图片描述
+				var pdesid = "#"+mySrc.substr(mySrc.lastIndexOf("_")+1,32);
+				
+				var descr = $(pdesid).html();
+				if(descr==""){
+					$("#picdescr").html("<span>Ablum Description</span>:<br/>This ablum has no description"+descr);
+				}else{
+					$("#picdescr").html("<span>Album Description</span>:<br/>"+descr);
+				}
+
+				if($(this).parent().hasClass("ls"))
+					//根据图片属性（水平或者竖直），调整大图的位置
+					$("#showPic").find("img").css("marginTop","0px");
+				else if($(this).parent().hasClass("pt"))
+					$("#showPic").find("img").css("marginTop","0px");
+			});
+
+		});
+		
+		$(function(){
+			//点击弹出div层
+			$(".btn-submit").click(function(){
+				window.location="__APP__/Uphotoalbum/doedit/pid/{$smarty.get.pid}/uid/{$smarty.get.uid}";
+			});
+		});
+		</script>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>My Movie-Edit my photo</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link href="__PUBLIC__/front/css/public.css" rel="stylesheet" type="text/css"/>
+		<link href="__PUBLIC__/front/css/bo.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="__PUBLIC__/front/js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/front/js/move.js"></script>
+		<link rel="stylesheet" href="__PUBLIC__/front/js/jcrop_zh/css/common.css" type="text/css" />
+		<link rel="stylesheet" href="__PUBLIC__/front/js/jcrop_zh/css/jquery.Jcrop.css" type="text/css" />
+		<script type="text/javascript" src="__PUBLIC__/front/js/jcrop_zh/js/jquery.Jcrop.js"></script>
+		<script type="text/javascript">
+			var sx=sy=sw=sh=0;
+			var picname="";
+			
+			function doLoad(filename){
+				if(filename=="null"){
+					alert('picture upload failed');
+					return;
+				}
+				picname=filename; //保存上传的图片名
+				$("#picdid").html("<img id='mypic' src='__ROOT__/Uploads/User/Headpic/"+filename+"'/>");
+				$("#picbut").css("display","block");
+				//使用Jcrop()正确初始化裁剪框
+				$("#mypic").Jcrop({
+					onChange:showCoords,
+					onSelect:showCoords,
+					aspectRatio:1
+				});
+				
+				$("#user_login").hide();
+				$("#hiddenheadpic").val(filename);
+			}
+			
+			//简单的事件处理程序，响应自onChange,onSelect事件，按照上面的Jcrop调用
+			function showCoords(obj){
+				sx = obj.x;	//起始x坐标
+				sy = obj.y; //起始y坐标
+				sw = obj.w;	//裁剪宽度
+				sh = obj.h; //裁剪高度
+			}
+			
+			//执行图片裁剪
+			function doCrop(){
+				if(sh<=0 ||sw<=0){
+					alert('Please select the cut zone');
+					return;
+				}
+				//ajax发送裁剪请求
+				$.ajax({
+					url:"__APP__/User/doCrop",
+					type:"post",
+					data:{ sx:sx,sy:sy,sw:sw,sh:sh,picname:picname},
+					dataType: "text",
+					success:function(res){
+						if(res=="ok"){
+							$("#picdid").html("<img id='mypic' src='__ROOT__/Uploads/User/Headpic/"+picname+"?id="+Math.random()+"'/>");
+							$("#picbut").css("display","none");
+							//使用Jcrop()正确初始化裁剪框
+							$("#mypic").Jcrop({
+								onChange:showCoords,
+								onSelect:showCoords,
+								aspectRatio:1
+							});
+						
+							$("#changepic").show();
+						}
+					},
+					error:function(){
+						alert('ajax request failed!');
+					}
+				});
+			}
+		
+		</script>
+		
+	</head>
+	<body>
+		<!-- 页头开始 -->
+		{include file="Public/uhead.html"}
+		<!-- 页头结束 -->
+		
+		<!-- 主体部分开始	-->
+		<div id="pmain">
+		
+			<!-- 左侧内容 -->
+			<div id="pmain_left">
+
+				<!-- 用户密码修改 -->
+				<div class="prlist">
+					<div class="prlist_title">&nbsp;Edit user photo</div>
+					
+					<div id="changemypic">
+						<iframe name="myframe" src="" frameborder="0" style="display:none;"></iframe>
+						<form action="__URL__/doupload" method="post" target="myframe" enctype="multipart/form-data">
+							<div class="item">
+							<br/>file:<input type="file" name="headpic" />
+								<label class="labelinp">&nbsp;</label>
+								<input value="upload" id="user_login" name="user_login" class="btn-submit" type="submit" classname="sub">&nbsp;&nbsp;
+							</div>
+						</form>
+					</div>
+					<div class="nav"></div>
+					<div id="picbut" style="display:none;">
+						<button class="btn-submit" onclick="doCrop()">Cut</button>
+					</div>
+				</div>
+				<div id="changepic" style="display:none;">
+					<form action="__APP__/User/dochangepic/uid/{$smarty.get.uid}" method="post">
+						<input type="hidden" id="hiddenheadpic" name="headpic" value="" />
+						<input type="submit" class="btn-submit" value="Submit"></button>
+					</form>
+				</div>	
+			</div>
+			<div class="nav"></div>
+			<div id="picdid"></div>
+		</div>
+		
+		<!-- 主体部分结束	-->
+		
+		<div class="nav"></div>
+		
+		<!-- 导入页脚部分 -->
+		{include file="Public/foot.html"}
+		
+		
+	</body>
+</html>

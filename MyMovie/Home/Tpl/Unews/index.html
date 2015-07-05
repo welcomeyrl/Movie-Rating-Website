@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>My Movie</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link href="__PUBLIC__/front/css/public.css" rel="stylesheet" type="text/css"/>
+		<link href="__PUBLIC__/front/css/bo.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="__PUBLIC__/front/js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/front/js/move.js"></script>
+		<script type="text/javascript">
+			//载入新鲜事列表第一页
+			$(function(){
+				doload(0);
+			});
+			
+			var uid = {$vo.id}; //获得当前用户id
+			var page = 1; //默认当前页
+			var totalPages = 1; //默认总页数
+			var tmp_data = new Array(); //定义缓存数据存储
+			
+			//定义载入新鲜事函数
+			function doload(m){
+				//获得请求页号
+				page += m;
+				
+				//判断是否有缓存数据
+				if(tmp_data[page]==undefined){
+					//执行ajax获得分页信息
+					$.ajax({
+						url:"__APP__/Unews/doload",
+						type:"get",
+						data:{ uid:uid,p:page},
+						dataType:"json",
+						async:false, //设置同步
+						success:function(res){
+							tmp_data[page] = res;
+						}
+					});
+				}
+				
+				totalPages = tmp_data[page]['totalPages'];
+				data = tmp_data[page]['list'];
+				
+				//判断是否有值
+				if(data != null){
+					//有值，准备遍历输出
+					var str = ""; //定义字符串准备接收
+					for(var i=0;i<data.length;i++){
+						str += "<div class='diaryreply_content_list'>";
+						str += "<div class='acthor'>";
+						str += "<div class='l'>";
+						str += "<div class='user_pic'>";
+						str += "<a href='__APP__/User/index/uid/"+data[i].uid+"'>";
+						str += "<img width='40' height='40' alt='' src='__ROOT__/Uploads/User/Headpic/"+data[i].headpic+"'>";
+						str += "</a>";
+						str += "</div>";
+						str += "<a href='__APP__/User/index/uid/"+data[i].uid+"'>"+data[i].username+"</a>"+data[i].addtime+"";
+						str += "</div>";
+						str += "<div class='r'><a class='mreply' href='__APP__/Pmood/index/uid/"+data[i].uid+"'>去回复</a></div>";
+						str += "</div>";
+						str += "<div class='content'>"+data[i].content+"</div>";
+						str += "</div>";
+					}
+					$(".diaryreply_content").html(str);
+					//防止溢出
+					if(page>totalPages){
+						page = totalPages;
+					}
+					if(page<1){
+						page = 1;
+					}
+					if(totalPages<1){
+						totalPages = 1;
+					}
+					
+					//输出分页信息
+					$("#pageinfo").html("第 "+page+"/"+totalPages+" 页");
+				}else{
+					$(".diaryreply_content").html("<div class='nobody'>好友还没有新鲜事</div>");
+				}
+				
+			}
+			
+			function here(){
+				 uid = {$vo.id};
+				 page = 1; 
+				 totalPages = 1;
+				 tmp_data = new Array();
+		
+				doload(0);
+			}
+
+		</script>
+	</head>
+	<body>
+		<!-- 页头开始 -->
+		{include file="Public/uhead.html"}
+		<!-- 页头结束 -->
+		
+		<!-- 主体部分开始	-->
+		<div id="pmain">
+		
+			<!-- 左侧内容 -->
+			<div id="pmain_left">
+
+				<!-- 左侧当前用户留言 -->
+				<div class="prlist">
+					<div class="prlist_title">{$newstitle}</div>
+					
+					<!-- 心情评论列表部分 -->
+					<div class="diaryreply_list">
+						<div class="diaryreply_head">
+							<span>最近他们都遇到了什么......</span>
+							<a href="javascript:here()" class="say" >刷新一下更精彩</a>
+						</div>
+					
+						<div class="diaryreply_content">
+							
+						</div>
+						<div class="fenye">
+							<a href="javascript:doload(1)">下一页</a>&nbsp;<a href="javascript:doload(-1)">上一页</a>&nbsp;<span id="pageinfo"></span>
+						</div>
+					</div>
+
+				</div>
+			</div>	
+		</div>
+		
+		<!-- 主体部分结束	-->
+		
+		<div class="nav"></div>
+		
+		<!-- 导入页脚部分 -->
+		{include file="Public/foot.html"}
+		
+		<div  id="alert_review_bg"></div>
+			<div id="words_edit">
+				<img src="__PUBLIC__/front/images/close.jpg" alt="关闭" />
+				<div class="atitle">
+					对【{$vo.username}】的心情有什么看法？
+				</div>
+				<div class="acon">
+				<form onsubmit="return replypmood(this)">
+					<input type="hidden" name="selfid" value="{$smarty.get.uid}" />
+					<input type="hidden" name="rid" value="" />
+					<input type="hidden" name="bid" value="" />
+					<textarea name="rcontent" id="text" style="resize:none;" cols="70" rows="10" ></textarea>
+					<input type="submit" value="回复心情" class="wsub"/>
+				</form>
+				</div>		
+			</div>
+	</body>
+</html>

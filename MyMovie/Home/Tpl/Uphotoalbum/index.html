@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>My Movie</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link href="__PUBLIC__/front/css/public.css" rel="stylesheet" type="text/css"/>
+		<link href="__PUBLIC__/front/css/bo.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="__PUBLIC__/front/js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/front/js/move.js"></script>
+		
+	</head>
+	<body>
+		<!-- 页头开始 -->
+		{include file="Public/uhead.html"}
+		<!-- 页头结束 -->
+		
+		<!-- 主体部分开始	-->
+		<div id="pmain">
+		
+			<!-- 左侧内容 -->
+			<div id="pmain_left">
+
+				<!-- 左侧当前用户影评 -->
+				<div class="prlist">
+					<div class="prlist_title">{$listtitle}
+					{if $smarty.get.uid == $smarty.session.loginuser.id}
+						<button class="btn-submit">Post Ablums</button>
+					{/if}
+					</div>
+					
+					{foreach $list as $v}
+					<div class="review_list">
+						<div class="picrl">
+							<img src="__ROOT__/Uploads/Photoalbum/Small/{$v.coverpic}"/>
+						</div>
+						<div class="picrr">
+							<div class="title">
+								<a href="__APP__/Uphotoalbum/albumdetail/uid/{$vo.id}/pid/{$v.id}/">
+									{$v.title} 
+								</a> 
+							</div>
+							<div class="acthor">
+								 {$vo.username}uploaded in: {$v.addtime|date_format:"%Y-%m-%d %H:%M"}
+							</div>
+							<div class="content">
+								{$v.content}
+							</div>
+						</div>
+					</div>
+					<div class="nav"></div>
+					{/foreach}
+					<div style="float:right; margin-right:60px;">{$page}</div>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<!-- 主体部分结束	-->
+		
+		<div class="nav"></div>
+		
+		<!-- 导入页脚部分 -->
+		{include file="Public/foot.html"}
+
+		<script type="text/javascript">
+		$(function(){
+			//点击弹出div层
+			$(".btn-submit").click(function(){
+				window.location="__APP__/Uphotoalbum/add/uid/{$smarty.get.uid}";
+			});
+		});
+		</script>
+	</body>
+</html>

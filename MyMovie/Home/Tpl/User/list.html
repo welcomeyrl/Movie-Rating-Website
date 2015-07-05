@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>My Movie</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link href="__PUBLIC__/front/css/public.css" rel="stylesheet" type="text/css"/>
+		<link href="__PUBLIC__/front/css/bo.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="__PUBLIC__/front/js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/front/js/move.js"></script>
+	</head>
+	<body>
+		<!-- 页头开始 -->
+		{include file="Public/uhead.html"}
+		<!-- 页头结束 -->
+		
+		<!-- 主体部分开始	-->
+		<div id="pmain">
+		
+			<!-- 左侧内容 -->
+			<div id="pmain_left">
+
+				<!-- 左侧当前用户影评 -->
+				<div class="prlist">
+					<div class="prlist_title">{$listtitle}</div>
+					
+					
+					{foreach $list as $vo}
+					<div class="review_list">
+						<div class="rl">
+							<img src="__PUBLIC__/front/images/movie_tk.jpg" alt="" />
+						</div>
+						<div class="rr">
+							<div class="title">
+								<a href="">
+									{$vo.title} 
+								</a> 
+							</div>
+							{if $vo.hehre==1}
+							<div class="acthor">
+								 Miss Sajarevo Comments: <a href=""> Gravity </a>
+							</div>
+							{/if}
+							<div class="content">
+								{$vo.content}
+							</div>
+						</div>
+					</div>
+					<div class="nav"></div>
+					{/foreach}
+					<div style="float:right; margin-right:60px;">{$page}</div>
+				</div>
+				
+			</div>
+			
+			<!-- 右侧内容 -->
+			<div id="pmain_right">
+				<div class="pinfobox">
+					<p class="prighttitle">Name</p>
+					<ul class="prightcc">
+						<li>
+							<em>0</em>
+							Following
+						</li>
+						<li>
+							<em>0</em>
+							Followers
+						</li>
+						<li>
+							<em>0</em>
+							Friends
+						</li>
+					</ul>
+					
+			<!--		<div class="nav"></div>
+					<p>积分：0</p>
+					<p>等级：死跑龙套</p>
+				</div> -->
+				
+				
+				<div class="pinfobox">
+					<p class="prighttitle">Personal Tag</p>
+					
+					<ul>
+						<li class="mytag"></li>
+						<li class="mytag">Comedy</li>
+						<li class="mytag">Literature and Art</li>
+						<li class="mytag">Popular Science</li>
+					</ul>
+				</div>
+				
+				<div class="pinfobox">
+					<p class="prighttitle">Recent Visitors</p>
+					
+					<ul>
+						<li class="mytag">William</li>
+						<li class="mytag">Jim</li>
+						<li class="mytag">Rose</li>
+						<li class="mytag">Chris</li>
+					</ul>
+				</div>
+				
+				<div class="pinfobox">
+					<p class="prighttitle">Friends' Birthdays</p>
+					
+					<ul>
+						<li class="myfriend">William</li>
+						<li class="myfriend">Jim</li>
+						<li class="myfriend">Rose</li>
+						<li class="myfriend">Chris</li>
+					</ul>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<!-- 主体部分结束	-->
+		
+		<div class="nav"></div>
+		
+		<!-- 导入页脚部分 -->
+		{include file="Public/foot.html"}
+		
+		
+	</body>
+</html>

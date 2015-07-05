@@ -1,0 +1,44 @@
+<div class="pageContent">
+	<form method="post" action="__URL__/addUserHandle/navTabId/listuser/callbackType/closeCurrent"  class="pageForm required-validate" 
+		onsubmit="return validateCallback(this,dialogAjaxDone);">
+		<div class="pageFormContent" layoutH="60">
+			<dl>
+				<dt>username:</dt>
+				<dd><input type="text" class="required"  style="width:100%" name="username"/></dd>
+			</dl>
+			<dl>
+				<dt>password:</dt>
+				<dd><input type="password" class="required"  style="width:100%" name="password"/></dd>
+			</dl>
+			<dl>
+				<dt>confirm password:</dt>
+				<dd><input type="password" class="required"  style="width:100%" name="repasswd"/></dd>
+			</dl>
+			<dl>
+				<dt>fullname:</dt>
+				<dd><input type="text" class="required"  style="width:100%" name="fullname"/></dd>
+			</dl>
+			<dl>
+				<dt>Email：</dt>
+				<dd><input type="text" class="required" style="width:100%" name="email"/></dd>
+			</dl>
+			<dl>
+				<dt>phone:</dt>
+				<dd><input type="text" class="required" style="width:100%" name="phone"/></dd>
+			</dl>
+			<dl>
+				<dt>status:</dt>
+				<dd><input type="radio" name="status" value="0" checked />enable
+					<input type="radio" name="status" value="1"/>disable
+				</dd>
+			</dl>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">save</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">cancel</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>

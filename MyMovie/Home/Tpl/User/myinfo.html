@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>My Movie - User Profile</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link href="__PUBLIC__/front/css/public.css" rel="stylesheet" type="text/css"/>
+		<link href="__PUBLIC__/front/css/bo.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="__PUBLIC__/front/js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/front/js/move.js"></script>
+	</head>
+	<body>
+		<!-- 页头开始 -->
+		{include file="Public/uhead.html"}
+		<!-- 页头结束 -->
+		
+		<!-- 主体部分开始	-->
+		<div id="pmain">
+		
+			<!-- 左侧内容 -->
+			<div id="pmain_left">
+
+				<!-- 左侧当前用户影评 -->
+				<div class="prlist">
+					<div class="prlist_title">&nbsp;{$vo.username}'s profile
+					{if $vo.id==$smarty.session.loginuser.id}
+						<span id="changemyinfolink">
+							<a href="__APP__/User/changemyinfo/uid/{$smarty.session.loginuser.id}">Edit my profile or password</a>
+						</span>
+					{/if}
+					</div>
+					
+					<div class="myinfo">
+						<table width="600" border="0" cellspacing="10">
+							<tr>
+								<th><span class="myinfotag">Photo:</span></th>
+								<td>
+									<img src="__ROOT__/Uploads/User/Headpic/{$vo.headpic}"/>
+								</td>
+								{if $vo.id==$smarty.session.loginuser.id}
+									<td><span id="changepiclink"><a href="__URL__/changepic/uid/{$smarty.session.loginuser.id}">Click to edit my photo </a></span></td>
+								{/if}
+							<tr>
+							<tr>
+								<th><span class="myinfotag">User ID:</span></th>
+								<td>{$vo.id}</td>
+								<th><span class="myinfotag">User Account:</span></th>
+								<td>{$vo.username}</td>
+							</tr>
+							
+					<!--		<tr>
+								<th><span class="myinfotag">用户积分:</span></th>
+								<td>{$vo.score}</td>
+								<th><span class="myinfotag">用户级别:</span></th>
+								<td>{$vo.level}</td>
+							</tr> -->
+							
+							<tr>
+								<th><span class="myinfotag">User Name:</span></th>
+								<td>{$vo.name}</td>
+								<th><span class="myinfotag">User Email:</span></th>
+								<td>{$vo.email}</td>
+							</tr>
+							
+							<tr>
+								<th><span class="myinfotag">User Gender:</span></th>
+								<td>{if $vo.sex==1}Male{else}Female{/if}</td>
+								<th><span class="myinfotag">User Birthday:</span></th>
+								<td>{$vo.birthday}</td>
+							</tr>
+							
+							<tr>
+								<th><span class="myinfotag">Register Time:</span></th>
+								<td>{$vo.addtime|date_format:"%Y-%m-%d %H:%M"}</td>
+								<th><span class="myinfotag">Last Time for Login</span></th>
+								<td>{$vo.lastlog|date_format:"%Y-%m-%d %H:%M"}</td>
+							</tr>
+								
+							<tr>
+								<th><span class="myinfotag">User Address:</span></th>
+								<td colspan="3">{$vo.address}</td>
+							</tr>
+
+							<tr>
+								<th><span class="myinfotag">Login Times:</span></th>
+								<td colspan="3">{$vo.logtimes}</td>
+							</tr>
+						</table>
+						
+						<div class="recom_list">
+							<div class="title">
+								<a>Movie Genres you like</a>
+								{if $smarty.get.uid==$smarty.session.loginuser.id}
+									<span id="changmytype"><a href="__APP__/Umytype/mytype/uid/{$smarty.get.uid}">Edit genres you like</a></span>
+								{/if}
+							</div>
+							<div>
+								{foreach $vo.mytypes as $filmtype}
+									<span class="filmtype">
+										<a href="__APP__/Typelist/tags/id/{$filmtype.id}">{$filmtype.typename}</a>
+									</span>
+								{/foreach}
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+		
+		<!-- 主体部分结束	-->
+		
+		<div class="nav"></div>
+		
+		<!-- 导入页脚部分 -->
+		{include file="Public/foot.html"}
+		<!-- 页脚不封结束 -->
+		
+		
+	</body>
+</html>

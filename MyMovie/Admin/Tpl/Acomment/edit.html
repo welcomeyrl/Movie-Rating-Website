@@ -1,0 +1,36 @@
+
+<div class="pageContent">
+	<form method="post" action="__URL__/update/navTabId/listsreview/callbackType/closeCurrent"  class="pageForm required-validate" 
+		onsubmit="return validateCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+		<div class="pageFormContent" layoutH="60">
+			<input type="hidden" name="id" value="{$vo.id}" />
+				<dl class="nowrap">
+					<dt style="width:80px;">ReplyID:</dt>
+					<dd style="width:50px;">{$vo.id}</dd>
+				</dl>
+				<dl class="nowrap">
+					<dt style="width:80px;">Reply:</dt>
+					<dd><textarea  cols="90" rows="5" disabled>{$vo.content}</textarea></dd>
+				</dl>
+				<dl class="nowrap">
+					<dt style="width:80px;">Reply_Status:</dt>
+					<dd>
+						<select name="status">
+							<option value="1" {if $vo.status==1}selected{/if}>Normal</option>
+							<option value="2" {if $vo.status==2}selected{/if}>Report</option>
+							<option value="3" {if $vo.status==3}selected{/if}>Ban to Post</option>
+						</select>
+					</dd>
+				</dl>
+					
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">save</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">cancel</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

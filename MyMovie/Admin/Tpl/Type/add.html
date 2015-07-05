@@ -1,0 +1,28 @@
+<div class="pageContent">
+	<form method="post" action="__URL__/insert/navTabId/listtype/callbackType/closeCurrent" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone);">
+		<div class="pageFormContent" layoutH="56">
+			<p>
+				<label>type:</label>
+				<select name="fid" class="required combox">
+					<option value="">select</option>
+					<option value="1">category</option>
+					<option value="2">country</option>
+					<option value="3">year</option>
+				</select>
+			</p>
+			<p>
+				<label>name:</label>
+				<input name="typename" type="text" size="30" />
+			</p>
+		</div>
+		<div class="formBar">
+			<ul>
+				<!--<li><a class="buttonActive" href="javascript:;"><span>保存</span></a></li>-->
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">save</button></div></div></li>
+				<li>
+					<div class="button"><div class="buttonContent"><button type="button" class="close">cancel</button></div></div>
+				</li>
+			</ul>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>Adding Albums</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script type="text/javascript">
+			var __root__="__ROOT__";
+		</script>
+		<link href="__PUBLIC__/front/css/public.css" rel="stylesheet" type="text/css"/>
+		<link href="__PUBLIC__/front/css/bo.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="__PUBLIC__/front/js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/front/js/move.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/swfupload/swfupload.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/swfupload/bopic.js"></script>
+		<script type="text/javascript">
+			var swfu;
+			window.onload = function () {
+				swfu = new SWFUpload({
+					// Backend Settings
+					upload_url: "__APP__/Uphotoalbum/doupload",
+					post_params: { "PHPSESSID": "{session_id()}"}, //定义了一些键/值对，允许在上传每个文件时候捎带地post给服务器
+
+					// File Upload Settings
+					file_size_limit : "2 MB",	// 2MB 特殊值0表示文件大小无限
+					file_types : "*.jpg;*.gif", // 类型
+					file_types_description : "JPG Images",  //设置文件选择对话框中显示给用户的文件描述。
+					file_upload_limit : 0, //设置SWFUpload实例允许上传的最多文件数量
+
+					// 事件处理程序设置，这些函数的定义在handlers.js
+					// 该处理程序不属于SwfUpload但是我的网站和控制
+					// 我的网站到SwfUpload事件的反应。
+					swfupload_preload_handler : preLoad,		//预加载上传处理程序
+					swfupload_load_failed_handler : loadFailed, //当页面不能正常加载flash影片的时候
+					file_queue_error_handler : fileQueueError,			//fileQueueError事件侦听函数(加入文件上传队列错误)
+					file_dialog_complete_handler : fileDialogComplete,  //fileDialogComplete事件侦听函数（加入文件队列完成后）
+					upload_progress_handler : uploadProgress,	//由flash控件定时触发,以达到及时显示上传进度的效果
+					upload_error_handler : uploadError,			//文件失败成功后触发的事件处理函数
+					upload_success_handler : uploadSuccess,		//文件上传成功后触发的事件处理函数
+					upload_complete_handler : uploadComplete, 	//上传（无论成功还是失败）一个后触发的事件处理函数
+
+					// Button Settings
+					button_image_url : "__PUBLIC__/swfupload/images/SmallSpyGlassWithTransperancy_17x18.png",
+					button_placeholder_id : "spanButtonPlaceholder",
+					button_width: 180,
+					button_height: 18,
+					button_text : '<span class="button">Select photos<span class="buttonSmall"> &nbsp;(maximum 2 MB)</span></span>',
+					button_text_style : '.button { font-family: Helvetica, Arial, sans-serif; color: #FFFFFF; font-weight: bold; font-size: 14pt; } .buttonSmall { color: #ccc;font-size: 12pt; }',
+					button_text_top_padding: 0,
+					button_text_left_padding: 18,
+					button_window_mode: SWFUpload.WINDOW_MODE.TRANSPARENT,
+					button_cursor: SWFUpload.CURSOR.HAND,
+					
+					// Flash Settings
+					flash_url : "__PUBLIC__/swfupload/swfupload.swf",
+					flash9_url : "__PUBLIC__/swfupload/swfupload_FP9.swf",
+
+					custom_settings : {
+						upload_target : "divFileProgressContainer"
+					},
+					
+					// Debug Settings
+					debug: false
+				});
+			};
+			
+		</script>
+
+	</head>
+	<body>
+		<!-- 页头开始 -->
+		{include file="Public/uhead.html"}
+		<!-- 页头结束 -->
+		
+		<!-- 主体部分开始	-->
+		<div id="pmain">
+		
+			<!-- 左侧内容 -->
+			<div id="pmain_left">
+
+				<!-- 左侧当前用户留言 -->
+				<div class="prlist">
+					<div class="prlist_title">Editing Ablums
+					
+					{if $smarty.get.uid == $smarty.session.loginuser.id}
+					<button class="btn-submit">Delete Albums</button>
+					{/if}
+					
+					</div>
+					
+					<!-- 心情评论列表部分 -->
+					<div class="diaryreply_list">
+						<div class="diaryreply_head">
+							<span>Record moments</span>
+							<a class="say">Freeze moments forever</a>
+						</div>
+					
+						<div class="diaryreply_content">
+							<form>
+								<div id="buttonforchoose">
+									<span id="spanButtonPlaceholder"></span>
+								</div>
+							</form>
+						</div>
+						
+						<form action="__APP__/Uphotoalbum/doupdate/pid/{$smarty.get.pid}" method="post">
+							<div id="divFileProgressContainer" style="height: 75px;"></div>
+							<div id="thumbnails">
+								
+								{foreach $plist as $p}
+								<div class="imgdiv" id="{$p.picname}">
+									<img style="margin: 5px; opacity: 1;" src="__ROOT__/Uploads/Photoalbum/Small/s_{$p.picname}">
+									<input type="hidden" name="picname[]" value="{$p.picname}">
+									<div class="divright">
+										<input type="button" class="picdel" value="Delete" id="{$p.picname}" onclick="dodel(this)">
+											<span class="spantext">
+												Set to Cover&nbsp;
+												<input type="radio" name="cover" value="{$p.picname}" {if $p.iscover==1}checked{/if} />
+											</span>
+										<textarea name="pictext[]" rows="2" cols="60" class="pictextarea">{$p.descr}</textarea>
+									</div>
+								</div>
+								{/foreach}
+							
+							
+							</div>
+							<br/>
+							&nbsp;Ablum Description:&nbsp;<input type="text" name="ablumname" value="{$vo.title}"/><br/><br/>
+							&nbsp;Album Description:&nbsp;<br/>
+							<textarea name="albumdes" rows="2" cols="60" class="pictext" style="margin-left:55px;resize:none;">{$vo.content}</textarea><br/><br/>
+							&nbsp;&nbsp;<input id="xctijiao" type="submit" value="Submit" style="float:right;margin-right:160px;"/>
+						
+						</form>
+					</div>
+
+				</div>
+			</div>	
+		</div>
+		
+		<!-- 主体部分结束	-->
+		
+		<div class="nav"></div>
+		
+		<!-- 导入页脚部分 -->
+		{include file="Public/foot.html"}
+		
+		<script type="text/javascript">
+			function dodel(obj){
+				x = document.getElementById(obj.id);
+				x.parentNode.removeChild(x); 
+			}
+
+			$(function(){
+			//点击弹出div层
+			$(".btn-submit").click(function(){
+				if(confirm("Are you sure to delete this collection?")){
+					window.location="__APP__/Uphotoalbum/dodel/pid/{$smarty.get.pid}";
+				}
+			});
+		});
+		</script>
+	</body>
+</html>

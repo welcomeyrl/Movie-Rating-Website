@@ -1,0 +1,39 @@
+		
+<div class="pageContent">
+		
+		<form method="post"  enctype="multipart/form-data" action="__URL__/insertpic/navTabId/listprevue/callbackType/closeCurrent" class="pageForm required-validate" onsubmit="return iframeCallback(this, dialogAjaxDone);">
+		
+		<div class="pageFormContent" layoutH="60" style="padding-right:100px;">
+				<input type="hidden" name="id" value="{$list.id}"/>
+				<dl >
+					<dt>&nbsp;&nbsp;title:</dt>
+					<dd>
+						{$list.filmname}
+					</dd>
+				</dl>
+				<dl>
+					<dt>title of trailer:</dt>
+					<dd>{$list.title}</dd>
+				</dl>
+				<dl>
+					<dt>&nbsp;&nbsp;poster:</dt>
+					<dd><input type="file" name="picname" /></dd>
+				</dl>
+				{if $list.picname!="null"}
+				<dl>
+					<dt>&nbsp;原封面图：</dt>
+					<dd><img src="__ROOT__/Uploads/Prevue/b_{$list.picname}"  /></dd>
+				</dl>
+				{/if}
+				
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">save</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">cancel</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

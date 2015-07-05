@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>My Movie</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link href="__PUBLIC__/front/css/newslist.css" rel="stylesheet" type="text/css"/>
+		<link href="__PUBLIC__/front/css/public.css" rel="stylesheet" type="text/css"/>
+		
+		<script type="text/javascript" src="__PUBLIC__/front/js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/front/js/move.js"></script>
+	</head>
+	
+	<body>
+		<!-- 个人中心菜单开始 -->
+		
+		{include file="Public/head.html"}
+			
+		<!-- 个人中心菜单结束 -->
+		<!-- 主体部分开始	-->
+		<div id="main">
+			<!-- 左侧内容 -->
+			<div id="main_left">
+				{foreach $list as $v}
+				<div class="ml">
+					<div class="mlt_left">
+						<a href="__APP__/Newsdetail/newsdetail/id/{$v.id}"><img style="width:115px;height:85px;" src="__ROOT__/Uploads/News/article/b_{$v.pica}"/></a>
+					</div>
+					<div class="mlt_right">
+						<div class="mltr_top">
+							<a href="__APP__/Newsdetail/newsdetail/id/{$v.id}">{$v.title2}</a>						
+						</div>
+						<div class="mltr_bottom">
+							{$v.explain}<a href="__APP__/Newsdetail/newsdetail/id/{$v.id}">【查看全文】</a>
+						</div>
+					</div>
+					<div class="mltrb1">浏览次数：{$v.looknum}</div>
+				</div>
+				{/foreach}
+				<div id="mlbb">
+					{$pageinfo}
+				</div>
+			</div>
+			
+			<!-- 右侧内容 -->
+			<div id="main_right">
+				<div id="mmr" style="overflow:hidden;">
+					{foreach $mpic as $mv}
+					<a href="__APP__/Newsdetail/newsdetail/id/{$mv.id}"><img style="width:300px;height:250px;" src="__ROOT__/Uploads/News/article/b_{$mv.pica}"></a>
+					{/foreach}
+				</div>
+				<script type="text/javascript">
+					//jquery的使用
+					$(function(){
+						doMove();
+					});
+					//定义移动信息
+					function doMove(){
+						//获取最后一个img节点对象
+						var img=$("#mmr img:last");
+						img.hide().prependTo("#mmr").slideDown(1500);
+						//img.hide().prependTo("div").fadeIn(4000);
+						setTimeout(doMove,4000);
+					}
+				</script>
+				<div id="mr1">
+					
+					<!--每周和每月新闻排行的显示-->
+					<script type="text/javascript">
+						$(function(){
+							$("#mrt3").click(function(){
+								$("#mrp").css("display","block");
+								$("#mrt3").css("background-color","#eee");
+								$("#mrt3").css("color","#02bcf5");
+								$("#mrb").css("display","none");
+								$("#mrt2").css("background-color","#2a6881");
+								$("#mrt2").css("color","#fff");
+							});
+							$("#mrt2").click(function(){
+								$("#mrb").css("display","block");
+								$("#mrt2").css("background-color","#eee");
+								$("#mrt2").css("color","#02bcf5");
+								$("#mrp").css("display","none");
+								$("#mrt3").css("background-color","#2a6881");
+								$("#mrt3").css("color","#fff");
+							});
+						});
+						
+					</script>
+					<div id="mrt">
+						<div id="mrt1">热门新闻TOP10</div>
+						<div id="mrt3">月</div>
+						<div id="mrt2">周</div>
+					</div>
+					<div id="mrb">
+						{$i=1}
+						{foreach $mnew1 as $m1}
+						<div class="mrb1">
+							<span>{$i++}{if $i==10}{$i=0}{/if}</span>
+							<div class="mrb2">
+								<a href="__APP__/Newsdetail/newsdetail/id/{$m1.id}">{$m1.title2}</a>...
+							</div>
+						</div>
+						{/foreach}
+					</div>
+					<div id="mrp" style="display:none;">
+						{foreach $mnew2 as $m2}
+						<div class="mrb1">
+							<span>{$i++}{if $i==10}{$i=0}{/if}</span>
+							<div class="mrb2">
+								<a href="__APP__/Newsdetail/newsdetail/id/{$m2.id}">{$m2.title2}</a>...
+							</div>
+						</div>
+						{/foreach}
+					</div>
+				</div>
+				<div id="mr2">
+					<div class="mr_l">
+						<span>精彩推荐</span>
+					</div>
+					{foreach $mnew3 as $v3}
+					<div class="mr_center">
+						<div class="mrc1">
+							<a href="__APP__/Newsdetail/newsdetail/id/{$v.id}"><img style="width:130px;height:100px;" src="__ROOT__/Uploads/News/article/b_{$v3.pica}"/></a>
+						</div>
+						<div class="mrc3">
+							{$v3.title2}
+						</div>
+					</div>
+					{/foreach}
+				</div>
+			</div>
+		</div>
+		
+		<!-- 主体部分结束	-->
+		<!-- 主体部分结束	-->
+		
+		<div class="nav"></div>
+		
+		<!-- 页脚部分开始 -->
+				{include file="Public/foot.html"}
+		<!-- 页脚不封结束 -->
+		
+		
+	</body>
+</html>

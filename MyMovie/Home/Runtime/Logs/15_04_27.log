@@ -1,0 +1,1068 @@
+[ 2015-04-27T15:53:26+08:00 ] 0.0.0.0 /MyMovie/index.php/Detail/index/id/31
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000546s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000621s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000403s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `mm_prevue` [ RunTime:0.001711s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_prevue` WHERE ( fid=31 ) LIMIT 1   [ RunTime:0.000166s ]
+SQL: UPDATE mm_movie SET clicknum=clicknum+1 WHERE id=31 [ RunTime:0.000132s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 80 行.
+SQL: SHOW COLUMNS FROM `mm_movie` [ RunTime:0.001232s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_movie` WHERE ( `id` = 31 ) LIMIT 1   [ RunTime:0.000114s ]
+SQL: SHOW COLUMNS FROM `mm_type` [ RunTime:0.000863s ]
+NOTIC: [8] Undefined index: mapping_limit /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Extend/Model/RelationModel.class.php 第 189 行.
+SQL: SELECT b.* FROM mm_movie_type AS a, mm_type AS b WHERE a.tid = b.id AND a. fid='31' ORDER BY id desc [ RunTime:0.000312s ]
+SQL: SHOW COLUMNS FROM `mm_actors` [ RunTime:0.001159s ]
+NOTIC: [8] Undefined index: mapping_limit /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Extend/Model/RelationModel.class.php 第 189 行.
+SQL: SELECT b.* FROM mm_movie_actor AS a, mm_actors AS b WHERE a.aid = b.id AND a. fid='31' ORDER BY id desc [ RunTime:0.000828s ]
+SQL: SHOW COLUMNS FROM `mm_filmpic` [ RunTime:0.000678s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_filmpic` WHERE ( 1=1 AND fid='31' )  [ RunTime:0.000112s ]
+SQL: SHOW COLUMNS FROM `mm_longreview` [ RunTime:0.000732s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_longreview` WHERE ( fid=31 ) LIMIT 1   [ RunTime:0.000195s ]
+SQL: SHOW COLUMNS FROM `mm_shortreview` [ RunTime:0.001142s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_shortreview` WHERE ( fid=31 ) LIMIT 1   [ RunTime:0.000176s ]
+SQL: SHOW COLUMNS FROM `mm_rate` [ RunTime:0.000873s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT AVG(score) AS tp_avg FROM `mm_rate` WHERE ( fid=31 ) LIMIT 1   [ RunTime:0.000137s ]
+SQL: SHOW COLUMNS FROM `mm_longreview` [ RunTime:0.000879s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_longreview` WHERE ( fid=31 and status in(1,2) ) ORDER BY rnum desc LIMIT 5   [ RunTime:0.000168s ]
+SQL: SHOW COLUMNS FROM `mm_user` [ RunTime:0.001170s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_user` WHERE ( 1=1 AND id='1' ) LIMIT 1   [ RunTime:0.000148s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_user` WHERE ( 1=1 AND id='1' ) LIMIT 1   [ RunTime:0.000128s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_user` WHERE ( 1=1 AND id='1' ) LIMIT 1   [ RunTime:0.000127s ]
+SQL: SHOW COLUMNS FROM `mm_reviewreply` [ RunTime:0.003592s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_reviewreply` WHERE ( rid=3 ) LIMIT 1   [ RunTime:0.000194s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_reviewreply` WHERE ( rid=14 ) LIMIT 1   [ RunTime:0.000096s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_reviewreply` WHERE ( rid=42 ) LIMIT 1   [ RunTime:0.000092s ]
+SQL: SHOW COLUMNS FROM `mm_type` [ RunTime:0.004377s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_type` WHERE ( fid=1 ) ORDER BY id LIMIT 30   [ RunTime:0.000133s ]
+SQL: SHOW COLUMNS FROM `mm_dialogue` [ RunTime:0.000970s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_dialogue` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.000104s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_dialogue` WHERE ( status=1 )  [ RunTime:0.000096s ]
+SQL: SHOW COLUMNS FROM `mm_movie` [ RunTime:0.000892s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `id`,`filmname`,`replynum` FROM `mm_movie` ORDER BY replynum desc LIMIT 10   [ RunTime:0.000117s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `id`,`filmname`,`picname`,`clicknum` FROM `mm_movie` ORDER BY clicknum desc LIMIT 8   [ RunTime:0.000118s ]
+SQL: SHOW COLUMNS FROM `mm_friendlink` [ RunTime:0.000763s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_friendlink`  [ RunTime:0.000093s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: antion /Applications/MAMP/htdocs/MyMovie/Home/Runtime/Cache/2660c348ed284db09b5b11583ed10374659245f6.file.detail.html.php 第 123 行.
+NOTIC: [8] Array to string conversion /Applications/MAMP/htdocs/MyMovie/Home/Runtime/Cache/2660c348ed284db09b5b11583ed10374659245f6.file.detail.html.php 第 864 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013470s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013534s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000416s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000303s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000137s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000304s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001291s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000433s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000482s ]
+
+[ 2015-04-27T15:53:27+08:00 ] 0.0.0.0 /MyMovie/index.php/Detail/pageload?fid=31&p=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000584s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000659s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000391s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `mm_shortreview` [ RunTime:0.001067s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_shortreview` WHERE ( fid=31 and status in(1,2) ) LIMIT 1   [ RunTime:0.000185s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_shortreview` WHERE ( `fid` = 31 ) AND ( `status` IN (1,2) ) ORDER BY rtime desc LIMIT 0,5   [ RunTime:0.000176s ]
+SQL: SHOW COLUMNS FROM `mm_user` [ RunTime:0.001005s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 14 ) LIMIT 1   [ RunTime:0.000174s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000132s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000131s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.000098s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000149s ]
+
+[ 2015-04-27T15:53:30+08:00 ] 0.0.0.0 /MyMovie/index.php/Detail/dosee
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000524s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000587s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000420s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `mm_seeorsaw` [ RunTime:0.001578s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_seeorsaw` WHERE ( `fid` = 31 ) AND ( `uid` = 18 ) LIMIT 1   [ RunTime:0.000165s ]
+SQL: INSERT INTO `mm_seeorsaw` (`fid`,`uid`,`status`) VALUES (31,18,1) [ RunTime:0.000329s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_seeorsaw` WHERE ( fid=31 and status=1 ) LIMIT 1   [ RunTime:0.000135s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_seeorsaw` WHERE ( fid=31 and status=2 ) LIMIT 1   [ RunTime:0.000108s ]
+SQL: UPDATE mm_movie SET snum=3 WHERE id=31 [ RunTime:0.000123s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 109 行.
+
+[ 2015-04-27T15:53:35+08:00 ] 0.0.0.0 /MyMovie/index.php/Detail/dosaw
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000524s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000587s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000390s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `mm_seeorsaw` [ RunTime:0.001544s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_seeorsaw` WHERE ( `fid` = 31 ) AND ( `uid` = 18 ) LIMIT 1   [ RunTime:0.000179s ]
+SQL: UPDATE `mm_seeorsaw` SET `fid`=31,`uid`=18,`status`=2 WHERE ( `id` = 33 ) [ RunTime:0.000358s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_seeorsaw` WHERE ( fid=31 and status=2 ) LIMIT 1   [ RunTime:0.000138s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_seeorsaw` WHERE ( fid=31 and status=1 ) LIMIT 1   [ RunTime:0.000126s ]
+SQL: UPDATE mm_movie SET onum=3 WHERE id=31 [ RunTime:0.000132s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 109 行.
+
+[ 2015-04-27T15:53:37+08:00 ] 0.0.0.0 /MyMovie/index.php/Detail/dosee
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000586s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000717s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000424s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `mm_seeorsaw` [ RunTime:0.001515s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_seeorsaw` WHERE ( `fid` = 31 ) AND ( `uid` = 18 ) LIMIT 1   [ RunTime:0.000170s ]
+SQL: UPDATE `mm_seeorsaw` SET `fid`=31,`uid`=18,`status`=1 WHERE ( `id` = 33 ) [ RunTime:0.000324s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_seeorsaw` WHERE ( fid=31 and status=1 ) LIMIT 1   [ RunTime:0.000125s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_seeorsaw` WHERE ( fid=31 and status=2 ) LIMIT 1   [ RunTime:0.000108s ]
+SQL: UPDATE mm_movie SET snum=3 WHERE id=31 [ RunTime:0.000097s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 109 行.
+
+[ 2015-04-27T15:53:40+08:00 ] 0.0.0.0 /MyMovie/index.php/Detail/dosee
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000625s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000698s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000518s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `mm_seeorsaw` [ RunTime:0.001672s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_seeorsaw` WHERE ( `fid` = 31 ) AND ( `uid` = 18 ) LIMIT 1   [ RunTime:0.000146s ]
+
+[ 2015-04-27T23:24:47+08:00 ] 0.0.0.0 /MyMovie/index.php/Index/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001289s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001385s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001087s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001179s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `mm_ppt` [ RunTime:0.001282s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_ppt` WHERE ( state=1 ) LIMIT 7   [ RunTime:0.000163s ]
+SQL: SHOW COLUMNS FROM `mm_movie` [ RunTime:0.001473s ]
+SQL: SHOW COLUMNS FROM `mm_movie_actor` [ RunTime:0.001197s ]
+SQL: SHOW COLUMNS FROM `mm_actors` [ RunTime:0.001270s ]
+SQL: SHOW COLUMNS FROM `mm_movie_type` [ RunTime:0.000999s ]
+SQL: SHOW COLUMNS FROM `mm_type` [ RunTime:0.000924s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_movie` WHERE ( id=38 )  [ RunTime:0.000190s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `aid` FROM `mm_movie_actor` WHERE ( fid=38 ) LIMIT 2   [ RunTime:0.000116s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=45 )  [ RunTime:0.000114s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=44 )  [ RunTime:0.000106s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `tid` FROM `mm_movie_type` WHERE ( fid=38 )  [ RunTime:0.000106s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=38 )  [ RunTime:0.000107s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=93 )  [ RunTime:0.000135s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.000105s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.000101s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_movie` WHERE ( id=39 )  [ RunTime:0.000124s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `aid` FROM `mm_movie_actor` WHERE ( fid=39 ) LIMIT 2   [ RunTime:0.000103s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=47 )  [ RunTime:0.000104s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=46 )  [ RunTime:0.000098s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `tid` FROM `mm_movie_type` WHERE ( fid=39 )  [ RunTime:0.000102s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=120 )  [ RunTime:0.000097s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=2 )  [ RunTime:0.000128s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.000099s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.000092s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=45 )  [ RunTime:0.000089s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_movie` WHERE ( id=35 )  [ RunTime:0.000132s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `aid` FROM `mm_movie_actor` WHERE ( fid=35 ) LIMIT 2   [ RunTime:0.000096s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=37 )  [ RunTime:0.000095s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=38 )  [ RunTime:0.000092s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `tid` FROM `mm_movie_type` WHERE ( fid=35 )  [ RunTime:0.000102s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=55 )  [ RunTime:0.000090s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=75 )  [ RunTime:0.000079s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=2 )  [ RunTime:0.000078s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.000079s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=6 )  [ RunTime:0.000078s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_movie` WHERE ( id=34 )  [ RunTime:0.000097s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `aid` FROM `mm_movie_actor` WHERE ( fid=34 ) LIMIT 2   [ RunTime:0.000102s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=33 )  [ RunTime:0.000130s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=34 )  [ RunTime:0.000127s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `tid` FROM `mm_movie_type` WHERE ( fid=34 )  [ RunTime:0.000129s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=38 )  [ RunTime:0.000120s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=76 )  [ RunTime:0.000121s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.000102s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_movie` WHERE ( id=36 )  [ RunTime:0.000143s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `aid` FROM `mm_movie_actor` WHERE ( fid=36 ) LIMIT 2   [ RunTime:0.000121s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=39 )  [ RunTime:0.000120s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `tid` FROM `mm_movie_type` WHERE ( fid=36 )  [ RunTime:0.000122s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=47 )  [ RunTime:0.000077s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=85 )  [ RunTime:0.000074s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.000075s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=19 )  [ RunTime:0.000099s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.000124s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_movie` WHERE ( id=37 )  [ RunTime:0.000132s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `aid` FROM `mm_movie_actor` WHERE ( fid=37 ) LIMIT 2   [ RunTime:0.000107s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=42 )  [ RunTime:0.000155s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=41 )  [ RunTime:0.000142s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `tid` FROM `mm_movie_type` WHERE ( fid=37 )  [ RunTime:0.000133s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=41 )  [ RunTime:0.000121s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=120 )  [ RunTime:0.000118s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.000107s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.000115s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_movie` WHERE ( id=31 )  [ RunTime:0.000124s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `aid` FROM `mm_movie_actor` WHERE ( fid=31 ) LIMIT 2   [ RunTime:0.000128s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=27 )  [ RunTime:0.000126s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=28 )  [ RunTime:0.000123s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `tid` FROM `mm_movie_type` WHERE ( fid=31 )  [ RunTime:0.000122s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=38 )  [ RunTime:0.000117s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=98 )  [ RunTime:0.000114s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=124 )  [ RunTime:0.000116s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=126 )  [ RunTime:0.000118s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.000098s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.000124s ]
+SQL: select r.id,r.fid,r.uid,r.title,r.content,u.username,m.filmname,m.picname from mm_longreview r,mm_movie m,mm_user u where r.status in(1,2) and r.fid=m.id and r.uid=u.id order by r.rnum desc limit 0,5 [ RunTime:0.000234s ]
+SQL: SHOW COLUMNS FROM `mm_dialogue` [ RunTime:0.000863s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_dialogue` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.000140s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_dialogue` WHERE ( status=1 )  [ RunTime:0.000091s ]
+SQL: SHOW COLUMNS FROM `mm_type` [ RunTime:0.000722s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_type` WHERE ( fid=1 ) ORDER BY id LIMIT 30   [ RunTime:0.000122s ]
+SQL: SHOW COLUMNS FROM `mm_friendlink` [ RunTime:0.000626s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_friendlink`  [ RunTime:0.000173s ]
+SQL: SHOW COLUMNS FROM `mm_movie` [ RunTime:0.001202s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `mm_movie` ORDER BY id asc LIMIT 0,4   [ RunTime:0.000128s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `mm_movie` ORDER BY id asc LIMIT 4,4   [ RunTime:0.000112s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `id`,`filmname`,`picname` FROM `mm_movie` ORDER BY addtime desc LIMIT 10   [ RunTime:0.000115s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `id`,`filmname`,`replynum` FROM `mm_movie` ORDER BY replynum desc LIMIT 10   [ RunTime:0.000109s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `id`,`filmname`,`picname`,`clicknum` FROM `mm_movie` ORDER BY clicknum desc LIMIT 8   [ RunTime:0.000108s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 1 /Applications/MAMP/htdocs/MyMovie/Home/Runtime/Cache/ca4f84cb58d324c7ecd7656a821abafd990478e2.file.index.html.php 第 183 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.024936s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025022s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001170s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001051s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000812s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000956s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004258s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001009s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001160s ]
+
+[ 2015-04-27T23:24:49+08:00 ] 0.0.0.0 /MyMovie/index.php/Detail/index/id/38
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000642s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000720s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000548s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `mm_prevue` [ RunTime:0.001791s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_prevue` WHERE ( fid=38 ) LIMIT 1   [ RunTime:0.000183s ]
+SQL: UPDATE mm_movie SET clicknum=clicknum+1 WHERE id=38 [ RunTime:0.000137s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 80 行.
+SQL: SHOW COLUMNS FROM `mm_movie` [ RunTime:0.001833s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_movie` WHERE ( `id` = 38 ) LIMIT 1   [ RunTime:0.000138s ]
+SQL: SHOW COLUMNS FROM `mm_type` [ RunTime:0.000923s ]
+NOTIC: [8] Undefined index: mapping_limit /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Extend/Model/RelationModel.class.php 第 189 行.
+SQL: SELECT b.* FROM mm_movie_type AS a, mm_type AS b WHERE a.tid = b.id AND a. fid='38' ORDER BY id desc [ RunTime:0.000192s ]
+SQL: SHOW COLUMNS FROM `mm_actors` [ RunTime:0.001121s ]
+NOTIC: [8] Undefined index: mapping_limit /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Extend/Model/RelationModel.class.php 第 189 行.
+SQL: SELECT b.* FROM mm_movie_actor AS a, mm_actors AS b WHERE a.aid = b.id AND a. fid='38' ORDER BY id desc [ RunTime:0.000849s ]
+SQL: SHOW COLUMNS FROM `mm_filmpic` [ RunTime:0.001023s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_filmpic` WHERE ( 1=1 AND fid='38' )  [ RunTime:0.000194s ]
+SQL: SHOW COLUMNS FROM `mm_longreview` [ RunTime:0.000824s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_longreview` WHERE ( fid=38 ) LIMIT 1   [ RunTime:0.000119s ]
+SQL: SHOW COLUMNS FROM `mm_shortreview` [ RunTime:0.000810s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_shortreview` WHERE ( fid=38 ) LIMIT 1   [ RunTime:0.000125s ]
+SQL: SHOW COLUMNS FROM `mm_rate` [ RunTime:0.000684s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT AVG(score) AS tp_avg FROM `mm_rate` WHERE ( fid=38 ) LIMIT 1   [ RunTime:0.000114s ]
+SQL: SHOW COLUMNS FROM `mm_longreview` [ RunTime:0.000932s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_longreview` WHERE ( fid=38 and status in(1,2) ) ORDER BY rnum desc LIMIT 5   [ RunTime:0.000144s ]
+SQL: SHOW COLUMNS FROM `mm_user` [ RunTime:0.001097s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_user` WHERE ( 1=1 AND id='1' ) LIMIT 1   [ RunTime:0.000162s ]
+SQL: SHOW COLUMNS FROM `mm_reviewreply` [ RunTime:0.000711s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_reviewreply` WHERE ( rid=46 ) LIMIT 1   [ RunTime:0.000109s ]
+SQL: SHOW COLUMNS FROM `mm_type` [ RunTime:0.000687s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_type` WHERE ( fid=1 ) ORDER BY id LIMIT 30   [ RunTime:0.000145s ]
+SQL: SHOW COLUMNS FROM `mm_dialogue` [ RunTime:0.000699s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_dialogue` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.000122s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_dialogue` WHERE ( status=1 )  [ RunTime:0.000102s ]
+SQL: SHOW COLUMNS FROM `mm_movie` [ RunTime:0.000921s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `id`,`filmname`,`replynum` FROM `mm_movie` ORDER BY replynum desc LIMIT 10   [ RunTime:0.000150s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `id`,`filmname`,`picname`,`clicknum` FROM `mm_movie` ORDER BY clicknum desc LIMIT 8   [ RunTime:0.000246s ]
+SQL: SHOW COLUMNS FROM `mm_friendlink` [ RunTime:0.000705s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_friendlink`  [ RunTime:0.000092s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: antion /Applications/MAMP/htdocs/MyMovie/Home/Runtime/Cache/2660c348ed284db09b5b11583ed10374659245f6.file.detail.html.php 第 123 行.
+NOTIC: [8] Array to string conversion /Applications/MAMP/htdocs/MyMovie/Home/Runtime/Cache/2660c348ed284db09b5b11583ed10374659245f6.file.detail.html.php 第 864 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015487s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015559s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000570s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000619s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000204s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000403s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002006s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000501s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000561s ]
+
+[ 2015-04-27T23:24:49+08:00 ] 0.0.0.0 /MyMovie/index.php/Detail/pageload?fid=38&p=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000523s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000586s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000385s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `mm_shortreview` [ RunTime:0.001154s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_shortreview` WHERE ( fid=38 and status in(1,2) ) LIMIT 1   [ RunTime:0.000152s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_shortreview` WHERE ( `fid` = 38 ) AND ( `status` IN (1,2) ) ORDER BY rtime desc LIMIT 0,5   [ RunTime:0.000164s ]
+SQL: SHOW COLUMNS FROM `mm_user` [ RunTime:0.001016s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 17 ) LIMIT 1   [ RunTime:0.000126s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 17 ) LIMIT 1   [ RunTime:0.000124s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 17 ) LIMIT 1   [ RunTime:0.000095s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000096s ]
+
+[ 2015-04-27T23:25:10+08:00 ] 0.0.0.0 /MyMovie/index.php/Detail/index/id/31
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000716s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000804s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `mm_prevue` [ RunTime:0.001361s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_prevue` WHERE ( fid=31 ) LIMIT 1   [ RunTime:0.000178s ]
+SQL: UPDATE mm_movie SET clicknum=clicknum+1 WHERE id=31 [ RunTime:0.000122s ]
+NOTIC: [2] mysql_num_rows() expects parameter 1 to be resource, boolean given /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 109 行.
+NOTIC: [2] mysql_free_result() expects parameter 1 to be resource, boolean given /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 80 行.
+SQL: SHOW COLUMNS FROM `mm_movie` [ RunTime:0.001004s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_movie` WHERE ( `id` = 31 ) LIMIT 1   [ RunTime:0.000112s ]
+SQL: SHOW COLUMNS FROM `mm_type` [ RunTime:0.000727s ]
+NOTIC: [8] Undefined index: mapping_limit /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Extend/Model/RelationModel.class.php 第 189 行.
+SQL: SELECT b.* FROM mm_movie_type AS a, mm_type AS b WHERE a.tid = b.id AND a. fid='31' ORDER BY id desc [ RunTime:0.000205s ]
+SQL: SHOW COLUMNS FROM `mm_actors` [ RunTime:0.000909s ]
+NOTIC: [8] Undefined index: mapping_limit /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Extend/Model/RelationModel.class.php 第 189 行.
+SQL: SELECT b.* FROM mm_movie_actor AS a, mm_actors AS b WHERE a.aid = b.id AND a. fid='31' ORDER BY id desc [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `mm_filmpic` [ RunTime:0.000890s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_filmpic` WHERE ( 1=1 AND fid='31' )  [ RunTime:0.000292s ]
+SQL: SHOW COLUMNS FROM `mm_longreview` [ RunTime:0.001088s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_longreview` WHERE ( fid=31 ) LIMIT 1   [ RunTime:0.000126s ]
+SQL: SHOW COLUMNS FROM `mm_shortreview` [ RunTime:0.000727s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_shortreview` WHERE ( fid=31 ) LIMIT 1   [ RunTime:0.000195s ]
+SQL: SHOW COLUMNS FROM `mm_rate` [ RunTime:0.000850s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT AVG(score) AS tp_avg FROM `mm_rate` WHERE ( fid=31 ) LIMIT 1   [ RunTime:0.000164s ]
+SQL: SHOW COLUMNS FROM `mm_longreview` [ RunTime:0.000899s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_longreview` WHERE ( fid=31 and status in(1,2) ) ORDER BY rnum desc LIMIT 5   [ RunTime:0.000210s ]
+SQL: SHOW COLUMNS FROM `mm_user` [ RunTime:0.000983s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_user` WHERE ( 1=1 AND id='1' ) LIMIT 1   [ RunTime:0.000160s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_user` WHERE ( 1=1 AND id='1' ) LIMIT 1   [ RunTime:0.000144s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_user` WHERE ( 1=1 AND id='1' ) LIMIT 1   [ RunTime:0.000123s ]
+SQL: SHOW COLUMNS FROM `mm_reviewreply` [ RunTime:0.001047s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_reviewreply` WHERE ( rid=3 ) LIMIT 1   [ RunTime:0.000196s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_reviewreply` WHERE ( rid=14 ) LIMIT 1   [ RunTime:0.000167s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_reviewreply` WHERE ( rid=42 ) LIMIT 1   [ RunTime:0.000125s ]
+SQL: SHOW COLUMNS FROM `mm_type` [ RunTime:0.000972s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_type` WHERE ( fid=1 ) ORDER BY id LIMIT 30   [ RunTime:0.000188s ]
+SQL: SHOW COLUMNS FROM `mm_dialogue` [ RunTime:0.000906s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_dialogue` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.000144s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_dialogue` WHERE ( status=1 )  [ RunTime:0.000139s ]
+SQL: SHOW COLUMNS FROM `mm_movie` [ RunTime:0.001265s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `id`,`filmname`,`replynum` FROM `mm_movie` ORDER BY replynum desc LIMIT 10   [ RunTime:0.000150s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `id`,`filmname`,`picname`,`clicknum` FROM `mm_movie` ORDER BY clicknum desc LIMIT 8   [ RunTime:0.000129s ]
+SQL: SHOW COLUMNS FROM `mm_friendlink` [ RunTime:0.000844s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_friendlink`  [ RunTime:0.000138s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: antion /Applications/MAMP/htdocs/MyMovie/Home/Runtime/Cache/2660c348ed284db09b5b11583ed10374659245f6.file.detail.html.php 第 123 行.
+NOTIC: [8] Array to string conversion /Applications/MAMP/htdocs/MyMovie/Home/Runtime/Cache/2660c348ed284db09b5b11583ed10374659245f6.file.detail.html.php 第 864 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014999s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015083s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000518s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000322s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000128s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000297s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001416s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000419s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000469s ]
+
+[ 2015-04-27T23:25:10+08:00 ] 0.0.0.0 /MyMovie/index.php/Detail/pageload?fid=31&p=1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000536s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000605s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000393s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `mm_shortreview` [ RunTime:0.000961s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_shortreview` WHERE ( fid=31 and status in(1,2) ) LIMIT 1   [ RunTime:0.000147s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_shortreview` WHERE ( `fid` = 31 ) AND ( `status` IN (1,2) ) ORDER BY rtime desc LIMIT 0,5   [ RunTime:0.000151s ]
+SQL: SHOW COLUMNS FROM `mm_user` [ RunTime:0.000954s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 14 ) LIMIT 1   [ RunTime:0.000129s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000097s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000095s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.000096s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000094s ]
+
+[ 2015-04-27T23:25:14+08:00 ] 0.0.0.0 /MyMovie/index.php/List/movielist
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000541s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000609s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000435s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `mm_movie` [ RunTime:0.001319s ]
+SQL: SHOW COLUMNS FROM `mm_movie` [ RunTime:0.001418s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_movie` WHERE ( status in (1,2) ) LIMIT 1   [ RunTime:0.000134s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_movie` WHERE ( status in (1,2) ) ORDER BY clicknum desc LIMIT 0,10   [ RunTime:0.000182s ]
+SQL: SHOW COLUMNS FROM `mm_actors` [ RunTime:0.000954s ]
+NOTIC: [8] Undefined index: mapping_limit /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Extend/Model/RelationModel.class.php 第 189 行.
+SQL: SELECT b.* FROM mm_movie_actor AS a, mm_actors AS b WHERE a.aid = b.id AND a. fid='29' ORDER BY id desc [ RunTime:0.000917s ]
+NOTIC: [8] Undefined index: mapping_limit /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Extend/Model/RelationModel.class.php 第 189 行.
+SQL: SELECT b.* FROM mm_movie_actor AS a, mm_actors AS b WHERE a.aid = b.id AND a. fid='30' ORDER BY id desc [ RunTime:0.000658s ]
+NOTIC: [8] Undefined index: mapping_limit /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Extend/Model/RelationModel.class.php 第 189 行.
+SQL: SELECT b.* FROM mm_movie_actor AS a, mm_actors AS b WHERE a.aid = b.id AND a. fid='31' ORDER BY id desc [ RunTime:0.000946s ]
+NOTIC: [8] Undefined index: mapping_limit /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Extend/Model/RelationModel.class.php 第 189 行.
+SQL: SELECT b.* FROM mm_movie_actor AS a, mm_actors AS b WHERE a.aid = b.id AND a. fid='36' ORDER BY id desc [ RunTime:0.000736s ]
+NOTIC: [8] Undefined index: mapping_limit /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Extend/Model/RelationModel.class.php 第 189 行.
+SQL: SELECT b.* FROM mm_movie_actor AS a, mm_actors AS b WHERE a.aid = b.id AND a. fid='39' ORDER BY id desc [ RunTime:0.000680s ]
+NOTIC: [8] Undefined index: mapping_limit /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Extend/Model/RelationModel.class.php 第 189 行.
+SQL: SELECT b.* FROM mm_movie_actor AS a, mm_actors AS b WHERE a.aid = b.id AND a. fid='35' ORDER BY id desc [ RunTime:0.000835s ]
+NOTIC: [8] Undefined index: mapping_limit /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Extend/Model/RelationModel.class.php 第 189 行.
+SQL: SELECT b.* FROM mm_movie_actor AS a, mm_actors AS b WHERE a.aid = b.id AND a. fid='32' ORDER BY id desc [ RunTime:0.000613s ]
+NOTIC: [8] Undefined index: mapping_limit /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Extend/Model/RelationModel.class.php 第 189 行.
+SQL: SELECT b.* FROM mm_movie_actor AS a, mm_actors AS b WHERE a.aid = b.id AND a. fid='38' ORDER BY id desc [ RunTime:0.000794s ]
+NOTIC: [8] Undefined index: mapping_limit /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Extend/Model/RelationModel.class.php 第 189 行.
+SQL: SELECT b.* FROM mm_movie_actor AS a, mm_actors AS b WHERE a.aid = b.id AND a. fid='37' ORDER BY id desc [ RunTime:0.000716s ]
+NOTIC: [8] Undefined index: mapping_limit /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Extend/Model/RelationModel.class.php 第 189 行.
+SQL: SELECT b.* FROM mm_movie_actor AS a, mm_actors AS b WHERE a.aid = b.id AND a. fid='34' ORDER BY id desc [ RunTime:0.000682s ]
+NOTIC: [8] Undefined index: tags /Applications/MAMP/htdocs/MyMovie/Home/Lib/Action/ListAction.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `mm_dialogue` [ RunTime:0.000708s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_dialogue` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.000103s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_dialogue` WHERE ( status=1 )  [ RunTime:0.000090s ]
+SQL: SHOW COLUMNS FROM `mm_friendlink` [ RunTime:0.000651s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_friendlink`  [ RunTime:0.000091s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.011733s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011821s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000392s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000232s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000127s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000285s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001169s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000524s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000582s ]
+
+[ 2015-04-27T23:25:42+08:00 ] 0.0.0.0 /MyMovie/index.php/Index/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000533s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000599s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000394s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `mm_ppt` [ RunTime:0.001843s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_ppt` WHERE ( state=1 ) LIMIT 7   [ RunTime:0.000145s ]
+SQL: SHOW COLUMNS FROM `mm_movie` [ RunTime:0.001144s ]
+SQL: SHOW COLUMNS FROM `mm_movie_actor` [ RunTime:0.000763s ]
+SQL: SHOW COLUMNS FROM `mm_actors` [ RunTime:0.000919s ]
+SQL: SHOW COLUMNS FROM `mm_movie_type` [ RunTime:0.000711s ]
+SQL: SHOW COLUMNS FROM `mm_type` [ RunTime:0.000709s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_movie` WHERE ( id=38 )  [ RunTime:0.000127s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `aid` FROM `mm_movie_actor` WHERE ( fid=38 ) LIMIT 2   [ RunTime:0.000088s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=45 )  [ RunTime:0.000090s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=44 )  [ RunTime:0.000082s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `tid` FROM `mm_movie_type` WHERE ( fid=38 )  [ RunTime:0.000082s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=38 )  [ RunTime:0.000130s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=93 )  [ RunTime:0.000119s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.000116s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.000077s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_movie` WHERE ( id=39 )  [ RunTime:0.000096s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `aid` FROM `mm_movie_actor` WHERE ( fid=39 ) LIMIT 2   [ RunTime:0.000078s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=47 )  [ RunTime:0.000077s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=46 )  [ RunTime:0.000075s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `tid` FROM `mm_movie_type` WHERE ( fid=39 )  [ RunTime:0.000099s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=120 )  [ RunTime:0.000082s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=2 )  [ RunTime:0.000077s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.000075s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.000074s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=45 )  [ RunTime:0.000072s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_movie` WHERE ( id=35 )  [ RunTime:0.000090s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `aid` FROM `mm_movie_actor` WHERE ( fid=35 ) LIMIT 2   [ RunTime:0.000075s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=37 )  [ RunTime:0.000103s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=38 )  [ RunTime:0.000081s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `tid` FROM `mm_movie_type` WHERE ( fid=35 )  [ RunTime:0.000080s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=55 )  [ RunTime:0.000077s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=75 )  [ RunTime:0.000073s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=2 )  [ RunTime:0.000075s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.000098s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=6 )  [ RunTime:0.000081s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_movie` WHERE ( id=34 )  [ RunTime:0.000092s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `aid` FROM `mm_movie_actor` WHERE ( fid=34 ) LIMIT 2   [ RunTime:0.000104s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=33 )  [ RunTime:0.000108s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=34 )  [ RunTime:0.000105s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `tid` FROM `mm_movie_type` WHERE ( fid=34 )  [ RunTime:0.000135s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=38 )  [ RunTime:0.000101s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=76 )  [ RunTime:0.000081s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.000081s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_movie` WHERE ( id=36 )  [ RunTime:0.000107s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `aid` FROM `mm_movie_actor` WHERE ( fid=36 ) LIMIT 2   [ RunTime:0.000117s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=39 )  [ RunTime:0.000116s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `tid` FROM `mm_movie_type` WHERE ( fid=36 )  [ RunTime:0.000117s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=47 )  [ RunTime:0.000116s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=85 )  [ RunTime:0.000103s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.000116s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=19 )  [ RunTime:0.000105s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.000079s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_movie` WHERE ( id=37 )  [ RunTime:0.000092s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `aid` FROM `mm_movie_actor` WHERE ( fid=37 ) LIMIT 2   [ RunTime:0.000077s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=42 )  [ RunTime:0.000077s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=41 )  [ RunTime:0.000073s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `tid` FROM `mm_movie_type` WHERE ( fid=37 )  [ RunTime:0.000076s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=41 )  [ RunTime:0.000096s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=120 )  [ RunTime:0.000082s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.000079s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.000077s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_movie` WHERE ( id=31 )  [ RunTime:0.000092s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `aid` FROM `mm_movie_actor` WHERE ( fid=31 ) LIMIT 2   [ RunTime:0.000079s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=27 )  [ RunTime:0.000078s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=28 )  [ RunTime:0.000075s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `tid` FROM `mm_movie_type` WHERE ( fid=31 )  [ RunTime:0.000075s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=38 )  [ RunTime:0.000127s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=98 )  [ RunTime:0.000075s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=124 )  [ RunTime:0.000076s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=126 )  [ RunTime:0.000075s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.000073s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.000074s ]
+SQL: select r.id,r.fid,r.uid,r.title,r.content,u.username,m.filmname,m.picname from mm_longreview r,mm_movie m,mm_user u where r.status in(1,2) and r.fid=m.id and r.uid=u.id order by r.rnum desc limit 0,5 [ RunTime:0.000189s ]
+SQL: SHOW COLUMNS FROM `mm_dialogue` [ RunTime:0.000936s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_dialogue` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.000120s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_dialogue` WHERE ( status=1 )  [ RunTime:0.000108s ]
+SQL: SHOW COLUMNS FROM `mm_type` [ RunTime:0.000705s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_type` WHERE ( fid=1 ) ORDER BY id LIMIT 30   [ RunTime:0.000182s ]
+SQL: SHOW COLUMNS FROM `mm_friendlink` [ RunTime:0.000914s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_friendlink`  [ RunTime:0.000127s ]
+SQL: SHOW COLUMNS FROM `mm_movie` [ RunTime:0.001227s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `mm_movie` ORDER BY id asc LIMIT 0,4   [ RunTime:0.000142s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `mm_movie` ORDER BY id asc LIMIT 4,4   [ RunTime:0.000142s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `id`,`filmname`,`picname` FROM `mm_movie` ORDER BY addtime desc LIMIT 10   [ RunTime:0.000143s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `id`,`filmname`,`replynum` FROM `mm_movie` ORDER BY replynum desc LIMIT 10   [ RunTime:0.000178s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `id`,`filmname`,`picname`,`clicknum` FROM `mm_movie` ORDER BY clicknum desc LIMIT 8   [ RunTime:0.000130s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined offset: 1 /Applications/MAMP/htdocs/MyMovie/Home/Runtime/Cache/ca4f84cb58d324c7ecd7656a821abafd990478e2.file.index.html.php 第 183 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015130s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015196s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000381s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000229s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000149s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000316s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001214s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000460s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000514s ]
+
+[ 2015-04-27T23:25:45+08:00 ] 0.0.0.0 /MyMovie/index.php/List/movielist
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000548s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000618s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000364s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000420s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `mm_movie` [ RunTime:0.002336s ]
+SQL: SHOW COLUMNS FROM `mm_movie` [ RunTime:0.001330s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_movie` WHERE ( status in (1,2) ) LIMIT 1   [ RunTime:0.000182s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_movie` WHERE ( status in (1,2) ) ORDER BY clicknum desc LIMIT 0,10   [ RunTime:0.000243s ]
+SQL: SHOW COLUMNS FROM `mm_actors` [ RunTime:0.001061s ]
+NOTIC: [8] Undefined index: mapping_limit /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Extend/Model/RelationModel.class.php 第 189 行.
+SQL: SELECT b.* FROM mm_movie_actor AS a, mm_actors AS b WHERE a.aid = b.id AND a. fid='29' ORDER BY id desc [ RunTime:0.001125s ]
+NOTIC: [8] Undefined index: mapping_limit /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Extend/Model/RelationModel.class.php 第 189 行.
+SQL: SELECT b.* FROM mm_movie_actor AS a, mm_actors AS b WHERE a.aid = b.id AND a. fid='30' ORDER BY id desc [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: mapping_limit /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Extend/Model/RelationModel.class.php 第 189 行.
+SQL: SELECT b.* FROM mm_movie_actor AS a, mm_actors AS b WHERE a.aid = b.id AND a. fid='31' ORDER BY id desc [ RunTime:0.000989s ]
+NOTIC: [8] Undefined index: mapping_limit /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Extend/Model/RelationModel.class.php 第 189 行.
+SQL: SELECT b.* FROM mm_movie_actor AS a, mm_actors AS b WHERE a.aid = b.id AND a. fid='36' ORDER BY id desc [ RunTime:0.000885s ]
+NOTIC: [8] Undefined index: mapping_limit /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Extend/Model/RelationModel.class.php 第 189 行.
+SQL: SELECT b.* FROM mm_movie_actor AS a, mm_actors AS b WHERE a.aid = b.id AND a. fid='39' ORDER BY id desc [ RunTime:0.001023s ]
+NOTIC: [8] Undefined index: mapping_limit /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Extend/Model/RelationModel.class.php 第 189 行.
+SQL: SELECT b.* FROM mm_movie_actor AS a, mm_actors AS b WHERE a.aid = b.id AND a. fid='35' ORDER BY id desc [ RunTime:0.001365s ]
+NOTIC: [8] Undefined index: mapping_limit /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Extend/Model/RelationModel.class.php 第 189 行.
+SQL: SELECT b.* FROM mm_movie_actor AS a, mm_actors AS b WHERE a.aid = b.id AND a. fid='32' ORDER BY id desc [ RunTime:0.000883s ]
+NOTIC: [8] Undefined index: mapping_limit /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Extend/Model/RelationModel.class.php 第 189 行.
+SQL: SELECT b.* FROM mm_movie_actor AS a, mm_actors AS b WHERE a.aid = b.id AND a. fid='38' ORDER BY id desc [ RunTime:0.000920s ]
+NOTIC: [8] Undefined index: mapping_limit /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Extend/Model/RelationModel.class.php 第 189 行.
+SQL: SELECT b.* FROM mm_movie_actor AS a, mm_actors AS b WHERE a.aid = b.id AND a. fid='37' ORDER BY id desc [ RunTime:0.000879s ]
+NOTIC: [8] Undefined index: mapping_limit /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Extend/Model/RelationModel.class.php 第 189 行.
+SQL: SELECT b.* FROM mm_movie_actor AS a, mm_actors AS b WHERE a.aid = b.id AND a. fid='34' ORDER BY id desc [ RunTime:0.000885s ]
+NOTIC: [8] Undefined index: tags /Applications/MAMP/htdocs/MyMovie/Home/Lib/Action/ListAction.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `mm_dialogue` [ RunTime:0.000805s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_dialogue` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.000130s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_dialogue` WHERE ( status=1 )  [ RunTime:0.000131s ]
+SQL: SHOW COLUMNS FROM `mm_friendlink` [ RunTime:0.000931s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_friendlink`  [ RunTime:0.000148s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.011555s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011631s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000272s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000226s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000127s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000279s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001027s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000514s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000583s ]
+
+[ 2015-04-27T23:25:53+08:00 ] 0.0.0.0 /MyMovie/index.php/Index/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000590s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000669s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000397s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Driver/Db/DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `mm_ppt` [ RunTime:0.002035s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_ppt` WHERE ( state=1 ) LIMIT 7   [ RunTime:0.000215s ]
+SQL: SHOW COLUMNS FROM `mm_movie` [ RunTime:0.002005s ]
+SQL: SHOW COLUMNS FROM `mm_movie_actor` [ RunTime:0.001008s ]
+SQL: SHOW COLUMNS FROM `mm_actors` [ RunTime:0.001297s ]
+SQL: SHOW COLUMNS FROM `mm_movie_type` [ RunTime:0.000903s ]
+SQL: SHOW COLUMNS FROM `mm_type` [ RunTime:0.000822s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_movie` WHERE ( id=38 )  [ RunTime:0.000177s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `aid` FROM `mm_movie_actor` WHERE ( fid=38 ) LIMIT 2   [ RunTime:0.000124s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=45 )  [ RunTime:0.000135s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=44 )  [ RunTime:0.000103s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `tid` FROM `mm_movie_type` WHERE ( fid=38 )  [ RunTime:0.000103s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=38 )  [ RunTime:0.000103s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=93 )  [ RunTime:0.000096s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.000143s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.000120s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_movie` WHERE ( id=39 )  [ RunTime:0.000129s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `aid` FROM `mm_movie_actor` WHERE ( fid=39 ) LIMIT 2   [ RunTime:0.000104s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=47 )  [ RunTime:0.000104s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=46 )  [ RunTime:0.000112s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `tid` FROM `mm_movie_type` WHERE ( fid=39 )  [ RunTime:0.000091s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=120 )  [ RunTime:0.000087s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=2 )  [ RunTime:0.000088s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.000116s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.000096s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=45 )  [ RunTime:0.000089s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_movie` WHERE ( id=35 )  [ RunTime:0.000110s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `aid` FROM `mm_movie_actor` WHERE ( fid=35 ) LIMIT 2   [ RunTime:0.000090s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=37 )  [ RunTime:0.000092s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=38 )  [ RunTime:0.000079s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `tid` FROM `mm_movie_type` WHERE ( fid=35 )  [ RunTime:0.000081s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=55 )  [ RunTime:0.000079s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=75 )  [ RunTime:0.000103s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=2 )  [ RunTime:0.000086s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.000082s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=6 )  [ RunTime:0.000109s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_movie` WHERE ( id=34 )  [ RunTime:0.000128s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `aid` FROM `mm_movie_actor` WHERE ( fid=34 ) LIMIT 2   [ RunTime:0.000115s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=33 )  [ RunTime:0.000114s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=34 )  [ RunTime:0.000112s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `tid` FROM `mm_movie_type` WHERE ( fid=34 )  [ RunTime:0.000101s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=38 )  [ RunTime:0.000123s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=76 )  [ RunTime:0.000098s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.000116s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_movie` WHERE ( id=36 )  [ RunTime:0.000131s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `aid` FROM `mm_movie_actor` WHERE ( fid=36 ) LIMIT 2   [ RunTime:0.000117s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=39 )  [ RunTime:0.000116s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `tid` FROM `mm_movie_type` WHERE ( fid=36 )  [ RunTime:0.000115s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=47 )  [ RunTime:0.000102s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=85 )  [ RunTime:0.000083s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.000117s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=19 )  [ RunTime:0.000082s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.000085s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_movie` WHERE ( id=37 )  [ RunTime:0.000105s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `aid` FROM `mm_movie_actor` WHERE ( fid=37 ) LIMIT 2   [ RunTime:0.000096s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=42 )  [ RunTime:0.000116s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=41 )  [ RunTime:0.000115s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `tid` FROM `mm_movie_type` WHERE ( fid=37 )  [ RunTime:0.000116s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=41 )  [ RunTime:0.000113s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=120 )  [ RunTime:0.000110s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.000111s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.000094s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_movie` WHERE ( id=31 )  [ RunTime:0.000130s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `aid` FROM `mm_movie_actor` WHERE ( fid=31 ) LIMIT 2   [ RunTime:0.000113s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=27 )  [ RunTime:0.000117s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `cname` FROM `mm_actors` WHERE ( id=28 )  [ RunTime:0.000114s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `tid` FROM `mm_movie_type` WHERE ( fid=31 )  [ RunTime:0.000113s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=38 )  [ RunTime:0.000102s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=98 )  [ RunTime:0.000098s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=124 )  [ RunTime:0.000131s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=126 )  [ RunTime:0.000111s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=1 )  [ RunTime:0.000100s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `typename` FROM `mm_type` WHERE ( fid=1 and id=7 )  [ RunTime:0.000126s ]
+SQL: select r.id,r.fid,r.uid,r.title,r.content,u.username,m.filmname,m.picname from mm_longreview r,mm_movie m,mm_user u where r.status in(1,2) and r.fid=m.id and r.uid=u.id order by r.rnum desc limit 0,5 [ RunTime:0.000218s ]
+SQL: SHOW COLUMNS FROM `mm_dialogue` [ RunTime:0.000873s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_dialogue` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.000103s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_dialogue` WHERE ( status=1 )  [ RunTime:0.000092s ]
+SQL: SHOW COLUMNS FROM `mm_type` [ RunTime:0.000655s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_type` WHERE ( fid=1 ) ORDER BY id LIMIT 30   [ RunTime:0.000143s ]
+SQL: SHOW COLUMNS FROM `mm_friendlink` [ RunTime:0.000814s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT * FROM `mm_friendlink`  [ RunTime:0.000152s ]
+SQL: SHOW COLUMNS FROM `mm_movie` [ RunTime:0.001118s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `mm_movie` ORDER BY id asc LIMIT 0,4   [ RunTime:0.000121s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `id`,`filmname`,`picname`,`rate` FROM `mm_movie` ORDER BY id asc LIMIT 4,4   [ RunTime:0.000100s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `id`,`filmname`,`picname` FROM `mm_movie` ORDER BY addtime desc LIMIT 10   [ RunTime:0.000102s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `id`,`filmname`,`replynum` FROM `mm_movie` ORDER BY replynum desc LIMIT 10   [ RunTime:0.000098s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /Applications/MAMP/htdocs/MyMovie/ThinkPHP/Lib/Core/Db.class.php 第 604 行.
+SQL: SELECT `id`,`filmname`,`picname`,`clicknum` FROM `mm_movie` ORDER BY clicknum desc LIMIT 8   [ RunTime:0.000098s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: loginuser /Applications/MAMP/htdocs/MyMovie/Home/Runtime/Cache/cd586c9822bcfea2f4e3b75e09956f265662f62a.file.head.html.php 第 133 行.
+NOTIC: [8] Undefined offset: 1 /Applications/MAMP/htdocs/MyMovie/Home/Runtime/Cache/ca4f84cb58d324c7ecd7656a821abafd990478e2.file.index.html.php 第 183 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015479s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015547s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000462s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000283s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000159s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000317s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001366s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000432s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000483s ]
+

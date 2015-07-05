@@ -1,0 +1,802 @@
+[ 2014-09-15T09:45:35+08:00 ] 127.0.0.1 /MyMovie/admin.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000766s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000962s ]
+
+[ 2014-09-15T09:45:35+08:00 ] 127.0.0.1 /MyMovie/admin.php/Login/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000734s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000863s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000547s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000660s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./Admin/Runtime/Cache\1500299db612747eb13340ceb5a635a1eba57fcf.file.index.html.php F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./Admin/Runtime/Cache\1500299db612747eb13340ceb5a635a1eba57fcf.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: Think F:\wamp\www\MyMovie\Admin\Runtime\Cache\1500299db612747eb13340ceb5a635a1eba57fcf.file.index.html.php 第 99 行.
+NOTIC: [8] Trying to get property of non-object F:\wamp\www\MyMovie\Admin\Runtime\Cache\1500299db612747eb13340ceb5a635a1eba57fcf.file.index.html.php 第 99 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.071119s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.071298s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001129s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000823s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001502s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001135s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005097s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001181s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001361s ]
+
+[ 2014-09-15T09:45:35+08:00 ] 127.0.0.1 /MyMovie/admin.php/Login/verify
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001507s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001739s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001260s ]
+
+[ 2014-09-15T09:45:51+08:00 ] 127.0.0.1 /MyMovie/admin.php/Login/verify/1410745551713
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000867s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000987s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000706s ]
+
+[ 2014-09-15T09:45:53+08:00 ] 127.0.0.1 /MyMovie/admin.php/Login/verify/1410745553265
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000761s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000947s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000552s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000653s ]
+
+[ 2014-09-15T09:45:54+08:00 ] 127.0.0.1 /MyMovie/admin.php/Login/verify/1410745554057
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000772s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000908s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000547s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000648s ]
+
+[ 2014-09-15T09:46:01+08:00 ] 127.0.0.1 /MyMovie/admin.php/Login/checkLogin/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001828s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002241s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000692s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000813s ]
+SQL: SHOW COLUMNS FROM `mm_auser` [ RunTime:0.033275s ]
+SQL: SELECT * FROM `mm_auser` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000442s ]
+NOTIC: [8] Use of undefined constant user - assumed 'user' F:\wamp\www\MyMovie\Admin\Lib\Action\LoginAction.class.php 第 37 行.
+SQL: UPDATE `mm_auser` SET `login_time`=1410745561,`login_ip`='127.0.0.1' WHERE ( `id` = 13 ) [ RunTime:0.122081s ]
+
+[ 2014-09-15T09:46:01+08:00 ] 127.0.0.1 /MyMovie/admin.php/Index/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000808s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001073s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000828s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./Admin/Runtime/Cache\46433abaf19f4a45af2d886fe791fa1fa6390c68.file.index.html.php F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./Admin/Runtime/Cache\46433abaf19f4a45af2d886fe791fa1fa6390c68.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.217313s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.217448s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000876s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000595s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000426s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000650s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002854s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000653s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000756s ]
+
+[ 2014-09-15T09:46:11+08:00 ] 127.0.0.1 /MyMovie/admin.php/Role/index?_=1410745571033
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001819s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002034s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001229s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001440s ]
+SQL: SHOW COLUMNS FROM `mm_role` [ RunTime:0.060791s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_role` LIMIT 1   [ RunTime:0.000220s ]
+SQL: SELECT * FROM `mm_role` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000283s ]
+NOTIC: [8] Undefined variable: search F:\wamp\www\MyMovie\Admin\Lib\Action\CommonAction.class.php 第 277 行.
+NOTIC: [8] Undefined index: values F:\wamp\www\MyMovie\Admin\Lib\Action\CommonAction.class.php 第 278 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./Admin/Runtime/Cache\7aff6164dc500cb1551dcfd1fd30a0d342d46ed3.file.index.html.php F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./Admin/Runtime/Cache\7aff6164dc500cb1551dcfd1fd30a0d342d46ed3.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\7aff6164dc500cb1551dcfd1fd30a0d342d46ed3.file.index.html.php 第 35 行.
+NOTIC: [8] Undefined index: _sort F:\wamp\www\MyMovie\Admin\Runtime\Cache\7aff6164dc500cb1551dcfd1fd30a0d342d46ed3.file.index.html.php 第 37 行.
+NOTIC: [8] Undefined index: keyword F:\wamp\www\MyMovie\Admin\Runtime\Cache\7aff6164dc500cb1551dcfd1fd30a0d342d46ed3.file.index.html.php 第 48 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\7aff6164dc500cb1551dcfd1fd30a0d342d46ed3.file.index.html.php 第 89 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\7aff6164dc500cb1551dcfd1fd30a0d342d46ed3.file.index.html.php 第 91 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\7aff6164dc500cb1551dcfd1fd30a0d342d46ed3.file.index.html.php 第 95 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.232981s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.233097s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000768s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000637s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000500s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000622s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002794s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000656s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000736s ]
+
+[ 2014-09-15T09:46:39+08:00 ] 127.0.0.1 /MyMovie/admin.php/Ppt/index?_=1410745598854
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000804s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000944s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000680s ]
+SQL: SHOW COLUMNS FROM `mm_movie` [ RunTime:0.006188s ]
+SQL: SELECT `id`,`filmname`,`status`,`picname` FROM `mm_movie` WHERE ( `status` = 2 )  [ RunTime:0.000476s ]
+SQL: SHOW COLUMNS FROM `mm_ppt` [ RunTime:0.006128s ]
+SQL: SELECT * FROM `mm_ppt` WHERE ( `title` = '泰坦尼克号' )  [ RunTime:0.000677s ]
+SQL: SELECT * FROM `mm_ppt` WHERE ( `title` = '忠犬八公的故事' )  [ RunTime:0.000369s ]
+SQL: SELECT * FROM `mm_ppt` WHERE ( `title` = '让子弹飞' )  [ RunTime:0.000384s ]
+SQL: SELECT * FROM `mm_ppt` WHERE ( `title` = '西西里的美丽传说' )  [ RunTime:0.000218s ]
+SQL: SELECT * FROM `mm_ppt` WHERE ( `title` = '活在当下Now Is Good' )  [ RunTime:0.000209s ]
+SQL: SELECT * FROM `mm_ppt` WHERE ( `title` = '阿甘正传' )  [ RunTime:0.000226s ]
+SQL: SELECT * FROM `mm_ppt` WHERE ( `title` = '那些年，我们一起追的女孩' )  [ RunTime:0.042209s ]
+NOTIC: [8] Undefined variable: mp F:\wamp\www\MyMovie\Admin\Lib\Action\PptAction.class.php 第 33 行.
+SQL: SELECT * FROM `mm_ppt`  [ RunTime:0.000562s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./Admin/Runtime/Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./Admin/Runtime/Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: currentPage F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php 第 31 行.
+NOTIC: [8] Trying to get property of non-object F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php 第 31 行.
+NOTIC: [8] Undefined index: numPerPage F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php 第 33 行.
+NOTIC: [8] Trying to get property of non-object F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php 第 33 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php 第 35 行.
+NOTIC: [8] Undefined index: _sort F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php 第 37 行.
+NOTIC: [8] Undefined index: keyword F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php 第 47 行.
+NOTIC: [8] Undefined index: state F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php 第 53 行.
+NOTIC: [8] Undefined index: state F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php 第 54 行.
+NOTIC: [8] Undefined index: numPerPage F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php 第 120 行.
+NOTIC: [8] Trying to get property of non-object F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php 第 120 行.
+NOTIC: [8] Undefined index: numPerPage F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php 第 121 行.
+NOTIC: [8] Trying to get property of non-object F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php 第 121 行.
+NOTIC: [8] Undefined index: numPerPage F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php 第 122 行.
+NOTIC: [8] Trying to get property of non-object F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php 第 122 行.
+NOTIC: [8] Undefined index: numPerPage F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php 第 123 行.
+NOTIC: [8] Trying to get property of non-object F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php 第 123 行.
+NOTIC: [8] Undefined index: numPerPage F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php 第 124 行.
+NOTIC: [8] Trying to get property of non-object F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php 第 124 行.
+NOTIC: [8] Undefined index: totalCount F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php 第 126 行.
+NOTIC: [8] Trying to get property of non-object F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php 第 126 行.
+NOTIC: [8] Undefined index: totalCount F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php 第 130 行.
+NOTIC: [8] Trying to get property of non-object F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php 第 130 行.
+NOTIC: [8] Undefined index: numPerPage F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php 第 131 行.
+NOTIC: [8] Trying to get property of non-object F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php 第 131 行.
+NOTIC: [8] Undefined index: currentPage F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php 第 132 行.
+NOTIC: [8] Trying to get property of non-object F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b95f471b1b1e9eb595bfa235f86c608df5b8463.file.index.html.php 第 132 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.178944s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.179080s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000720s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000509s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000388s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000709s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002566s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000827s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000913s ]
+
+[ 2014-09-15T09:46:44+08:00 ] 127.0.0.1 /MyMovie/admin.php/Dialogue/index?_=1410745603778
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000831s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000962s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000747s ]
+SQL: SHOW COLUMNS FROM `mm_dialogue` [ RunTime:0.005609s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_dialogue` LIMIT 1   [ RunTime:0.000319s ]
+SQL: SELECT * FROM `mm_dialogue` ORDER BY id desc LIMIT 0,10   [ RunTime:0.001022s ]
+NOTIC: [8] Undefined variable: search F:\wamp\www\MyMovie\Admin\Lib\Action\CommonAction.class.php 第 277 行.
+NOTIC: [8] Undefined index: values F:\wamp\www\MyMovie\Admin\Lib\Action\CommonAction.class.php 第 278 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./Admin/Runtime/Cache\b7eb814d4804cf048c1c35b8ad2a72367090ea95.file.index.html.php F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./Admin/Runtime/Cache\b7eb814d4804cf048c1c35b8ad2a72367090ea95.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./Admin/Runtime/Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./Admin/Runtime/Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 32 行.
+NOTIC: [8] Undefined index: _sort F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 34 行.
+NOTIC: [8] Undefined index: keyword F:\wamp\www\MyMovie\Admin\Runtime\Cache\b7eb814d4804cf048c1c35b8ad2a72367090ea95.file.index.html.php 第 39 行.
+NOTIC: [8] Undefined index: status F:\wamp\www\MyMovie\Admin\Runtime\Cache\b7eb814d4804cf048c1c35b8ad2a72367090ea95.file.index.html.php 第 45 行.
+NOTIC: [8] Undefined index: status F:\wamp\www\MyMovie\Admin\Runtime\Cache\b7eb814d4804cf048c1c35b8ad2a72367090ea95.file.index.html.php 第 46 行.
+NOTIC: [8] Undefined index: status F:\wamp\www\MyMovie\Admin\Runtime\Cache\b7eb814d4804cf048c1c35b8ad2a72367090ea95.file.index.html.php 第 47 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\b7eb814d4804cf048c1c35b8ad2a72367090ea95.file.index.html.php 第 78 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\b7eb814d4804cf048c1c35b8ad2a72367090ea95.file.index.html.php 第 83 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.255503s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.255657s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000763s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000553s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000405s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000614s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002582s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000672s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000760s ]
+
+[ 2014-09-15T09:46:50+08:00 ] 127.0.0.1 /MyMovie/admin.php/Friendlink/index?_=1410745610484
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001151s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001329s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000765s ]
+SQL: SHOW COLUMNS FROM `mm_friendlink` [ RunTime:0.010609s ]
+NOTIC: [8] Undefined index: pageNum F:\wamp\www\MyMovie\Admin\Lib\Action\FriendlinkAction.class.php 第 23 行.
+NOTIC: [8] Undefined variable: map F:\wamp\www\MyMovie\Admin\Lib\Action\FriendlinkAction.class.php 第 28 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_friendlink` LIMIT 1   [ RunTime:0.000422s ]
+NOTIC: [8] Undefined variable: map F:\wamp\www\MyMovie\Admin\Lib\Action\FriendlinkAction.class.php 第 31 行.
+NOTIC: [8] Undefined variable: order F:\wamp\www\MyMovie\Admin\Lib\Action\FriendlinkAction.class.php 第 31 行.
+SQL: SELECT * FROM `mm_friendlink` LIMIT 0,10   [ RunTime:0.000526s ]
+NOTIC: [8] Undefined index: pageNum F:\wamp\www\MyMovie\Admin\Lib\Action\FriendlinkAction.class.php 第 35 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./Admin/Runtime/Cache\e5abb7025611be686f1c73d67a3510ceb9cf6056.file.index.html.php F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./Admin/Runtime/Cache\e5abb7025611be686f1c73d67a3510ceb9cf6056.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\e5abb7025611be686f1c73d67a3510ceb9cf6056.file.index.html.php 第 36 行.
+NOTIC: [8] Undefined index: _sort F:\wamp\www\MyMovie\Admin\Runtime\Cache\e5abb7025611be686f1c73d67a3510ceb9cf6056.file.index.html.php 第 38 行.
+NOTIC: [8] Undefined index: keyword F:\wamp\www\MyMovie\Admin\Runtime\Cache\e5abb7025611be686f1c73d67a3510ceb9cf6056.file.index.html.php 第 48 行.
+NOTIC: [8] Undefined index: state F:\wamp\www\MyMovie\Admin\Runtime\Cache\e5abb7025611be686f1c73d67a3510ceb9cf6056.file.index.html.php 第 54 行.
+NOTIC: [8] Undefined index: state F:\wamp\www\MyMovie\Admin\Runtime\Cache\e5abb7025611be686f1c73d67a3510ceb9cf6056.file.index.html.php 第 55 行.
+NOTIC: [8] Undefined index: state F:\wamp\www\MyMovie\Admin\Runtime\Cache\e5abb7025611be686f1c73d67a3510ceb9cf6056.file.index.html.php 第 56 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\e5abb7025611be686f1c73d67a3510ceb9cf6056.file.index.html.php 第 94 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.192238s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.192362s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000718s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000489s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000371s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000592s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002393s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000628s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000710s ]
+
+[ 2014-09-15T09:46:55+08:00 ] 127.0.0.1 /MyMovie/admin.php/Movie/index?_=1410745615251
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000864s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001006s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000959s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001062s ]
+SQL: SHOW COLUMNS FROM `mm_movie` [ RunTime:0.007499s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_movie` LIMIT 1   [ RunTime:0.001076s ]
+SQL: SELECT * FROM `mm_movie` ORDER BY id desc LIMIT 0,10   [ RunTime:0.001497s ]
+NOTIC: [8] Undefined variable: search F:\wamp\www\MyMovie\Admin\Lib\Action\CommonAction.class.php 第 277 行.
+NOTIC: [8] Undefined index: values F:\wamp\www\MyMovie\Admin\Lib\Action\CommonAction.class.php 第 278 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./Admin/Runtime/Cache\91401d1b47ecc952f164870a7ec97adec19ce16f.file.index.html.php F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./Admin/Runtime/Cache\91401d1b47ecc952f164870a7ec97adec19ce16f.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\91401d1b47ecc952f164870a7ec97adec19ce16f.file.index.html.php 第 36 行.
+NOTIC: [8] Undefined index: _sort F:\wamp\www\MyMovie\Admin\Runtime\Cache\91401d1b47ecc952f164870a7ec97adec19ce16f.file.index.html.php 第 38 行.
+NOTIC: [8] Undefined index: keyword F:\wamp\www\MyMovie\Admin\Runtime\Cache\91401d1b47ecc952f164870a7ec97adec19ce16f.file.index.html.php 第 50 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\91401d1b47ecc952f164870a7ec97adec19ce16f.file.index.html.php 第 113 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\91401d1b47ecc952f164870a7ec97adec19ce16f.file.index.html.php 第 116 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\91401d1b47ecc952f164870a7ec97adec19ce16f.file.index.html.php 第 122 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\91401d1b47ecc952f164870a7ec97adec19ce16f.file.index.html.php 第 126 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\91401d1b47ecc952f164870a7ec97adec19ce16f.file.index.html.php 第 128 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\91401d1b47ecc952f164870a7ec97adec19ce16f.file.index.html.php 第 130 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\91401d1b47ecc952f164870a7ec97adec19ce16f.file.index.html.php 第 134 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.304849s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.305043s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000729s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000573s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000383s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000605s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002535s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000630s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000714s ]
+
+[ 2014-09-15T09:48:16+08:00 ] 127.0.0.1 /MyMovie/admin.php/Movie/add?_=1410745695951
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000831s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001012s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000719s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./Admin/Runtime/Cache\bd301c1c3175c420f0a329e8640be96ad8d26e5f.file.add.html.php F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./Admin/Runtime/Cache\bd301c1c3175c420f0a329e8640be96ad8d26e5f.file.add.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.067274s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067445s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002402s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001088s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000768s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001044s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005902s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001042s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001166s ]
+
+[ 2014-09-15T09:48:21+08:00 ] 127.0.0.1 /MyMovie/admin.php/Actors/index?_=1410745701156
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001604s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001829s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000795s ]
+SQL: SELECT act.*,COUNT(pic.aid) 'num' FROM mm_actors act LEFT JOIN mm_picactor pic ON pic.aid=act.id [ RunTime:0.001053s ]
+SQL: SHOW COLUMNS FROM `mm_actors` [ RunTime:0.006198s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_actors` LIMIT 1   [ RunTime:0.000319s ]
+SQL: SELECT * FROM `mm_actors` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000971s ]
+NOTIC: [8] Undefined variable: search F:\wamp\www\MyMovie\Admin\Lib\Action\CommonAction.class.php 第 277 行.
+NOTIC: [8] Undefined index: values F:\wamp\www\MyMovie\Admin\Lib\Action\CommonAction.class.php 第 278 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./Admin/Runtime/Cache\a61250fa5289ddd33a8f5520f987db935c8252fe.file.index.html.php F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./Admin/Runtime/Cache\a61250fa5289ddd33a8f5520f987db935c8252fe.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\a61250fa5289ddd33a8f5520f987db935c8252fe.file.index.html.php 第 36 行.
+NOTIC: [8] Undefined index: _sort F:\wamp\www\MyMovie\Admin\Runtime\Cache\a61250fa5289ddd33a8f5520f987db935c8252fe.file.index.html.php 第 38 行.
+NOTIC: [8] Undefined index: keyword F:\wamp\www\MyMovie\Admin\Runtime\Cache\a61250fa5289ddd33a8f5520f987db935c8252fe.file.index.html.php 第 50 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\a61250fa5289ddd33a8f5520f987db935c8252fe.file.index.html.php 第 91 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\a61250fa5289ddd33a8f5520f987db935c8252fe.file.index.html.php 第 105 行.
+NOTIC: [8] Undefined index: num F:\wamp\www\MyMovie\Admin\Runtime\Cache\a61250fa5289ddd33a8f5520f987db935c8252fe.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: num F:\wamp\www\MyMovie\Admin\Runtime\Cache\a61250fa5289ddd33a8f5520f987db935c8252fe.file.index.html.php 第 149 行.
+NOTIC: [8] Undefined index: num F:\wamp\www\MyMovie\Admin\Runtime\Cache\a61250fa5289ddd33a8f5520f987db935c8252fe.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: num F:\wamp\www\MyMovie\Admin\Runtime\Cache\a61250fa5289ddd33a8f5520f987db935c8252fe.file.index.html.php 第 149 行.
+NOTIC: [8] Undefined index: num F:\wamp\www\MyMovie\Admin\Runtime\Cache\a61250fa5289ddd33a8f5520f987db935c8252fe.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: num F:\wamp\www\MyMovie\Admin\Runtime\Cache\a61250fa5289ddd33a8f5520f987db935c8252fe.file.index.html.php 第 149 行.
+NOTIC: [8] Undefined index: num F:\wamp\www\MyMovie\Admin\Runtime\Cache\a61250fa5289ddd33a8f5520f987db935c8252fe.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: num F:\wamp\www\MyMovie\Admin\Runtime\Cache\a61250fa5289ddd33a8f5520f987db935c8252fe.file.index.html.php 第 149 行.
+NOTIC: [8] Undefined index: num F:\wamp\www\MyMovie\Admin\Runtime\Cache\a61250fa5289ddd33a8f5520f987db935c8252fe.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: num F:\wamp\www\MyMovie\Admin\Runtime\Cache\a61250fa5289ddd33a8f5520f987db935c8252fe.file.index.html.php 第 149 行.
+NOTIC: [8] Undefined index: num F:\wamp\www\MyMovie\Admin\Runtime\Cache\a61250fa5289ddd33a8f5520f987db935c8252fe.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: num F:\wamp\www\MyMovie\Admin\Runtime\Cache\a61250fa5289ddd33a8f5520f987db935c8252fe.file.index.html.php 第 149 行.
+NOTIC: [8] Undefined index: num F:\wamp\www\MyMovie\Admin\Runtime\Cache\a61250fa5289ddd33a8f5520f987db935c8252fe.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: num F:\wamp\www\MyMovie\Admin\Runtime\Cache\a61250fa5289ddd33a8f5520f987db935c8252fe.file.index.html.php 第 149 行.
+NOTIC: [8] Undefined index: num F:\wamp\www\MyMovie\Admin\Runtime\Cache\a61250fa5289ddd33a8f5520f987db935c8252fe.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: num F:\wamp\www\MyMovie\Admin\Runtime\Cache\a61250fa5289ddd33a8f5520f987db935c8252fe.file.index.html.php 第 149 行.
+NOTIC: [8] Undefined index: num F:\wamp\www\MyMovie\Admin\Runtime\Cache\a61250fa5289ddd33a8f5520f987db935c8252fe.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: num F:\wamp\www\MyMovie\Admin\Runtime\Cache\a61250fa5289ddd33a8f5520f987db935c8252fe.file.index.html.php 第 149 行.
+NOTIC: [8] Undefined index: num F:\wamp\www\MyMovie\Admin\Runtime\Cache\a61250fa5289ddd33a8f5520f987db935c8252fe.file.index.html.php 第 147 行.
+NOTIC: [8] Undefined index: num F:\wamp\www\MyMovie\Admin\Runtime\Cache\a61250fa5289ddd33a8f5520f987db935c8252fe.file.index.html.php 第 149 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.222581s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.222722s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000797s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000502s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000377s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000602s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002502s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000657s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000746s ]
+
+[ 2014-09-15T09:48:26+08:00 ] 127.0.0.1 /MyMovie/admin.php/Type/index?_=1410745706412
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000890s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001032s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000730s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000851s ]
+SQL: SHOW COLUMNS FROM `mm_type` [ RunTime:0.045629s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_type` LIMIT 1   [ RunTime:0.000338s ]
+SQL: SELECT * FROM `mm_type` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000848s ]
+NOTIC: [8] Undefined variable: search F:\wamp\www\MyMovie\Admin\Lib\Action\CommonAction.class.php 第 277 行.
+NOTIC: [8] Undefined index: values F:\wamp\www\MyMovie\Admin\Lib\Action\CommonAction.class.php 第 278 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./Admin/Runtime/Cache\5e6af35262558e025103a78c4b2346fe9d25667b.file.index.html.php F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./Admin/Runtime/Cache\5e6af35262558e025103a78c4b2346fe9d25667b.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\5e6af35262558e025103a78c4b2346fe9d25667b.file.index.html.php 第 35 行.
+NOTIC: [8] Undefined index: _sort F:\wamp\www\MyMovie\Admin\Runtime\Cache\5e6af35262558e025103a78c4b2346fe9d25667b.file.index.html.php 第 37 行.
+NOTIC: [8] Undefined index: keyword F:\wamp\www\MyMovie\Admin\Runtime\Cache\5e6af35262558e025103a78c4b2346fe9d25667b.file.index.html.php 第 48 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\5e6af35262558e025103a78c4b2346fe9d25667b.file.index.html.php 第 84 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\5e6af35262558e025103a78c4b2346fe9d25667b.file.index.html.php 第 87 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\5e6af35262558e025103a78c4b2346fe9d25667b.file.index.html.php 第 89 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.185206s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.185314s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000713s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000490s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000377s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000630s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002458s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000755s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000845s ]
+
+[ 2014-09-15T09:48:29+08:00 ] 127.0.0.1 /MyMovie/admin.php/Acomment/index?_=1410745709475
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000864s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000722s ]
+SQL: SHOW COLUMNS FROM `mm_acomment` [ RunTime:0.003674s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_acomment` LIMIT 1   [ RunTime:0.000271s ]
+SQL: SELECT * FROM `mm_acomment` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000558s ]
+SQL: SHOW COLUMNS FROM `mm_user` [ RunTime:0.005544s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.001155s ]
+SQL: SHOW COLUMNS FROM `mm_actors` [ RunTime:0.006548s ]
+SQL: SELECT * FROM `mm_actors` WHERE ( `id` = 38 ) LIMIT 1   [ RunTime:0.000634s ]
+SQL: SHOW COLUMNS FROM `mm_report` [ RunTime:0.004790s ]
+SQL: SELECT * FROM `mm_report` WHERE ( zid=41 ) LIMIT 1   [ RunTime:0.000941s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000452s ]
+SQL: SELECT * FROM `mm_actors` WHERE ( `id` = 28 ) LIMIT 1   [ RunTime:0.000503s ]
+SQL: SELECT * FROM `mm_report` WHERE ( zid=40 ) LIMIT 1   [ RunTime:0.000356s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000321s ]
+SQL: SELECT * FROM `mm_actors` WHERE ( `id` = 47 ) LIMIT 1   [ RunTime:0.000429s ]
+SQL: SELECT * FROM `mm_report` WHERE ( zid=39 ) LIMIT 1   [ RunTime:0.000413s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000423s ]
+SQL: SELECT * FROM `mm_actors` WHERE ( `id` = 47 ) LIMIT 1   [ RunTime:0.000700s ]
+SQL: SELECT * FROM `mm_report` WHERE ( zid=38 ) LIMIT 1   [ RunTime:0.000392s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000307s ]
+SQL: SELECT * FROM `mm_actors` WHERE ( `id` = 23 ) LIMIT 1   [ RunTime:0.001029s ]
+SQL: SELECT * FROM `mm_report` WHERE ( zid=37 ) LIMIT 1   [ RunTime:0.000259s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000248s ]
+SQL: SELECT * FROM `mm_actors` WHERE ( `id` = 23 ) LIMIT 1   [ RunTime:0.000247s ]
+SQL: SELECT * FROM `mm_report` WHERE ( zid=36 ) LIMIT 1   [ RunTime:0.000229s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000243s ]
+SQL: SELECT * FROM `mm_actors` WHERE ( `id` = 23 ) LIMIT 1   [ RunTime:0.000257s ]
+SQL: SELECT * FROM `mm_report` WHERE ( zid=35 ) LIMIT 1   [ RunTime:0.000288s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000351s ]
+SQL: SELECT * FROM `mm_actors` WHERE ( `id` = 23 ) LIMIT 1   [ RunTime:0.000390s ]
+SQL: SELECT * FROM `mm_report` WHERE ( zid=34 ) LIMIT 1   [ RunTime:0.000342s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000271s ]
+SQL: SELECT * FROM `mm_actors` WHERE ( `id` = 23 ) LIMIT 1   [ RunTime:0.000272s ]
+SQL: SELECT * FROM `mm_report` WHERE ( zid=33 ) LIMIT 1   [ RunTime:0.000268s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000233s ]
+SQL: SELECT * FROM `mm_actors` WHERE ( `id` = 23 ) LIMIT 1   [ RunTime:0.000296s ]
+SQL: SELECT * FROM `mm_report` WHERE ( zid=32 ) LIMIT 1   [ RunTime:0.000220s ]
+NOTIC: [8] Undefined variable: search F:\wamp\www\MyMovie\Admin\Lib\Action\CommonAction.class.php 第 277 行.
+NOTIC: [8] Undefined index: values F:\wamp\www\MyMovie\Admin\Lib\Action\CommonAction.class.php 第 278 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./Admin/Runtime/Cache\13b52f28108e0cc51091df08f01af9b0a0260d03.file.index.html.php F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./Admin/Runtime/Cache\13b52f28108e0cc51091df08f01af9b0a0260d03.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 32 行.
+NOTIC: [8] Undefined index: _sort F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 34 行.
+NOTIC: [8] Undefined index: keyword F:\wamp\www\MyMovie\Admin\Runtime\Cache\13b52f28108e0cc51091df08f01af9b0a0260d03.file.index.html.php 第 39 行.
+NOTIC: [8] Undefined index: status F:\wamp\www\MyMovie\Admin\Runtime\Cache\13b52f28108e0cc51091df08f01af9b0a0260d03.file.index.html.php 第 45 行.
+NOTIC: [8] Undefined index: status F:\wamp\www\MyMovie\Admin\Runtime\Cache\13b52f28108e0cc51091df08f01af9b0a0260d03.file.index.html.php 第 46 行.
+NOTIC: [8] Undefined index: status F:\wamp\www\MyMovie\Admin\Runtime\Cache\13b52f28108e0cc51091df08f01af9b0a0260d03.file.index.html.php 第 47 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\13b52f28108e0cc51091df08f01af9b0a0260d03.file.index.html.php 第 72 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\13b52f28108e0cc51091df08f01af9b0a0260d03.file.index.html.php 第 77 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\13b52f28108e0cc51091df08f01af9b0a0260d03.file.index.html.php 第 79 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\13b52f28108e0cc51091df08f01af9b0a0260d03.file.index.html.php 第 82 行.
+NOTIC: [8] Undefined index: report F:\wamp\www\MyMovie\Admin\Runtime\Cache\13b52f28108e0cc51091df08f01af9b0a0260d03.file.index.html.php 第 108 行.
+NOTIC: [8] Undefined index: report F:\wamp\www\MyMovie\Admin\Runtime\Cache\13b52f28108e0cc51091df08f01af9b0a0260d03.file.index.html.php 第 108 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.209058s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.209154s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000678s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000488s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000538s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000917s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002911s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000997s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001135s ]
+
+[ 2014-09-15T09:48:35+08:00 ] 127.0.0.1 /MyMovie/admin.php/Prevue/index?_=1410745714631
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001321s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001541s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000861s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000994s ]
+SQL: SHOW COLUMNS FROM `mm_prevue` [ RunTime:0.004261s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_prevue` LIMIT 1   [ RunTime:0.000361s ]
+SQL: SELECT * FROM `mm_prevue` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000581s ]
+SQL: SHOW COLUMNS FROM `mm_movie` [ RunTime:0.008657s ]
+SQL: SELECT `filmname` FROM `mm_movie` WHERE ( `id` = 34 ) LIMIT 1   [ RunTime:0.000501s ]
+SQL: SELECT `filmname` FROM `mm_movie` WHERE ( `id` = 38 ) LIMIT 1   [ RunTime:0.000998s ]
+SQL: SELECT `filmname` FROM `mm_movie` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000276s ]
+SQL: SELECT `filmname` FROM `mm_movie` WHERE ( `id` = 32 ) LIMIT 1   [ RunTime:0.000238s ]
+SQL: SELECT `filmname` FROM `mm_movie` WHERE ( `id` = 37 ) LIMIT 1   [ RunTime:0.000223s ]
+SQL: SELECT `filmname` FROM `mm_movie` WHERE ( `id` = 30 ) LIMIT 1   [ RunTime:0.000300s ]
+SQL: SELECT `filmname` FROM `mm_movie` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000421s ]
+SQL: SELECT `filmname` FROM `mm_movie` WHERE ( `id` = 36 ) LIMIT 1   [ RunTime:0.000327s ]
+SQL: SELECT `filmname` FROM `mm_movie` WHERE ( `id` = 31 ) LIMIT 1   [ RunTime:0.000621s ]
+SQL: SELECT `filmname` FROM `mm_movie` WHERE ( `id` = 35 ) LIMIT 1   [ RunTime:0.000552s ]
+NOTIC: [8] Undefined variable: search F:\wamp\www\MyMovie\Admin\Lib\Action\CommonAction.class.php 第 277 行.
+NOTIC: [8] Undefined index: values F:\wamp\www\MyMovie\Admin\Lib\Action\CommonAction.class.php 第 278 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./Admin/Runtime/Cache\609ca603726cd7bd2c19fc4479c7c43236f03fc8.file.index.html.php F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./Admin/Runtime/Cache\609ca603726cd7bd2c19fc4479c7c43236f03fc8.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 32 行.
+NOTIC: [8] Undefined index: _sort F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 34 行.
+NOTIC: [8] Undefined index: keyword F:\wamp\www\MyMovie\Admin\Runtime\Cache\609ca603726cd7bd2c19fc4479c7c43236f03fc8.file.index.html.php 第 39 行.
+NOTIC: [8] Undefined index: status F:\wamp\www\MyMovie\Admin\Runtime\Cache\609ca603726cd7bd2c19fc4479c7c43236f03fc8.file.index.html.php 第 45 行.
+NOTIC: [8] Undefined index: status F:\wamp\www\MyMovie\Admin\Runtime\Cache\609ca603726cd7bd2c19fc4479c7c43236f03fc8.file.index.html.php 第 46 行.
+NOTIC: [8] Undefined index: status F:\wamp\www\MyMovie\Admin\Runtime\Cache\609ca603726cd7bd2c19fc4479c7c43236f03fc8.file.index.html.php 第 47 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\609ca603726cd7bd2c19fc4479c7c43236f03fc8.file.index.html.php 第 80 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\609ca603726cd7bd2c19fc4479c7c43236f03fc8.file.index.html.php 第 86 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\609ca603726cd7bd2c19fc4479c7c43236f03fc8.file.index.html.php 第 88 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.242050s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.242240s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001035s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000732s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000575s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001054s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003747s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001201s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001301s ]
+
+[ 2014-09-15T09:48:42+08:00 ] 127.0.0.1 /MyMovie/admin.php/Longreview/index?_=1410745722155
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000907s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001041s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000722s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000835s ]
+SQL: SHOW COLUMNS FROM `mm_longreview` [ RunTime:0.005777s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_longreview` LIMIT 1   [ RunTime:0.000319s ]
+SQL: SELECT * FROM `mm_longreview` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000715s ]
+SQL: SHOW COLUMNS FROM `mm_user` [ RunTime:0.006791s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.002223s ]
+SQL: SHOW COLUMNS FROM `mm_reviewreply` [ RunTime:0.007315s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_reviewreply` WHERE ( rid=46 ) LIMIT 1   [ RunTime:0.000568s ]
+SQL: SHOW COLUMNS FROM `mm_movie` [ RunTime:0.007058s ]
+SQL: SELECT * FROM `mm_movie` WHERE ( `id` = 38 ) LIMIT 1   [ RunTime:0.000579s ]
+SQL: SHOW COLUMNS FROM `mm_report` [ RunTime:0.007148s ]
+SQL: SELECT * FROM `mm_report` WHERE ( lid=46 ) LIMIT 1   [ RunTime:0.000618s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000472s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_reviewreply` WHERE ( rid=45 ) LIMIT 1   [ RunTime:0.000433s ]
+SQL: SELECT * FROM `mm_movie` WHERE ( `id` = 39 ) LIMIT 1   [ RunTime:0.000432s ]
+SQL: SELECT * FROM `mm_report` WHERE ( lid=45 ) LIMIT 1   [ RunTime:0.000355s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 9 ) LIMIT 1   [ RunTime:0.000373s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_reviewreply` WHERE ( rid=44 ) LIMIT 1   [ RunTime:0.000255s ]
+SQL: SELECT * FROM `mm_movie` WHERE ( `id` = 32 ) LIMIT 1   [ RunTime:0.000468s ]
+SQL: SELECT * FROM `mm_report` WHERE ( lid=44 ) LIMIT 1   [ RunTime:0.000330s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000361s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_reviewreply` WHERE ( rid=43 ) LIMIT 1   [ RunTime:0.000250s ]
+SQL: SELECT * FROM `mm_movie` WHERE ( `id` = 30 ) LIMIT 1   [ RunTime:0.000244s ]
+SQL: SELECT * FROM `mm_report` WHERE ( lid=43 ) LIMIT 1   [ RunTime:0.000215s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_reviewreply` WHERE ( rid=42 ) LIMIT 1   [ RunTime:0.000236s ]
+SQL: SELECT * FROM `mm_movie` WHERE ( `id` = 31 ) LIMIT 1   [ RunTime:0.000273s ]
+SQL: SELECT * FROM `mm_report` WHERE ( lid=42 ) LIMIT 1   [ RunTime:0.000220s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000214s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_reviewreply` WHERE ( rid=41 ) LIMIT 1   [ RunTime:0.000213s ]
+SQL: SELECT * FROM `mm_movie` WHERE ( `id` = 36 ) LIMIT 1   [ RunTime:0.000273s ]
+SQL: SELECT * FROM `mm_report` WHERE ( lid=41 ) LIMIT 1   [ RunTime:0.000213s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000248s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_reviewreply` WHERE ( rid=40 ) LIMIT 1   [ RunTime:0.000251s ]
+SQL: SELECT * FROM `mm_movie` WHERE ( `id` = 32 ) LIMIT 1   [ RunTime:0.000302s ]
+SQL: SELECT * FROM `mm_report` WHERE ( lid=40 ) LIMIT 1   [ RunTime:0.000455s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.000344s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_reviewreply` WHERE ( rid=37 ) LIMIT 1   [ RunTime:0.000246s ]
+SQL: SELECT * FROM `mm_movie` WHERE ( `id` = 30 ) LIMIT 1   [ RunTime:0.000394s ]
+SQL: SELECT * FROM `mm_report` WHERE ( lid=37 ) LIMIT 1   [ RunTime:0.000611s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 6 ) LIMIT 1   [ RunTime:0.000471s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_reviewreply` WHERE ( rid=34 ) LIMIT 1   [ RunTime:0.000496s ]
+SQL: SELECT * FROM `mm_movie` WHERE ( `id` = 36 ) LIMIT 1   [ RunTime:0.000658s ]
+SQL: SELECT * FROM `mm_report` WHERE ( lid=34 ) LIMIT 1   [ RunTime:0.000517s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000515s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_reviewreply` WHERE ( rid=32 ) LIMIT 1   [ RunTime:0.000739s ]
+SQL: SELECT * FROM `mm_movie` WHERE ( `id` = 32 ) LIMIT 1   [ RunTime:0.000385s ]
+SQL: SELECT * FROM `mm_report` WHERE ( lid=32 ) LIMIT 1   [ RunTime:0.000268s ]
+NOTIC: [8] Undefined variable: search F:\wamp\www\MyMovie\Admin\Lib\Action\CommonAction.class.php 第 277 行.
+NOTIC: [8] Undefined index: values F:\wamp\www\MyMovie\Admin\Lib\Action\CommonAction.class.php 第 278 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./Admin/Runtime/Cache\0ffa8a2bc1577a58ff37384b2ceb9f24879a6b8a.file.index.html.php F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./Admin/Runtime/Cache\0ffa8a2bc1577a58ff37384b2ceb9f24879a6b8a.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 32 行.
+NOTIC: [8] Undefined index: _sort F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 34 行.
+NOTIC: [8] Undefined index: keyword F:\wamp\www\MyMovie\Admin\Runtime\Cache\0ffa8a2bc1577a58ff37384b2ceb9f24879a6b8a.file.index.html.php 第 39 行.
+NOTIC: [8] Undefined index: status F:\wamp\www\MyMovie\Admin\Runtime\Cache\0ffa8a2bc1577a58ff37384b2ceb9f24879a6b8a.file.index.html.php 第 45 行.
+NOTIC: [8] Undefined index: status F:\wamp\www\MyMovie\Admin\Runtime\Cache\0ffa8a2bc1577a58ff37384b2ceb9f24879a6b8a.file.index.html.php 第 46 行.
+NOTIC: [8] Undefined index: status F:\wamp\www\MyMovie\Admin\Runtime\Cache\0ffa8a2bc1577a58ff37384b2ceb9f24879a6b8a.file.index.html.php 第 47 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\0ffa8a2bc1577a58ff37384b2ceb9f24879a6b8a.file.index.html.php 第 71 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\0ffa8a2bc1577a58ff37384b2ceb9f24879a6b8a.file.index.html.php 第 77 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\0ffa8a2bc1577a58ff37384b2ceb9f24879a6b8a.file.index.html.php 第 79 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\0ffa8a2bc1577a58ff37384b2ceb9f24879a6b8a.file.index.html.php 第 82 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\0ffa8a2bc1577a58ff37384b2ceb9f24879a6b8a.file.index.html.php 第 84 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\0ffa8a2bc1577a58ff37384b2ceb9f24879a6b8a.file.index.html.php 第 86 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.250858s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.250963s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000706s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000512s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000377s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000575s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002393s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000883s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2014-09-15T09:48:45+08:00 ] 127.0.0.1 /MyMovie/admin.php/Shortreview/index?_=1410745725099
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000859s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000995s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000652s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000742s ]
+SQL: SHOW COLUMNS FROM `mm_shortreview` [ RunTime:0.008053s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_shortreview` LIMIT 1   [ RunTime:0.000445s ]
+SQL: SELECT * FROM `mm_shortreview` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000873s ]
+SQL: SHOW COLUMNS FROM `mm_user` [ RunTime:0.006644s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 14 ) LIMIT 1   [ RunTime:0.000466s ]
+SQL: SHOW COLUMNS FROM `mm_movie` [ RunTime:0.008378s ]
+SQL: SELECT * FROM `mm_movie` WHERE ( `id` = 31 ) LIMIT 1   [ RunTime:0.000820s ]
+SQL: SHOW COLUMNS FROM `mm_report` [ RunTime:0.006293s ]
+SQL: SELECT * FROM `mm_report` WHERE ( rid=83 ) LIMIT 1   [ RunTime:0.000606s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000390s ]
+SQL: SELECT * FROM `mm_movie` WHERE ( `id` = 31 ) LIMIT 1   [ RunTime:0.000513s ]
+SQL: SELECT * FROM `mm_report` WHERE ( rid=82 ) LIMIT 1   [ RunTime:0.000338s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000483s ]
+SQL: SELECT * FROM `mm_movie` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000486s ]
+SQL: SELECT * FROM `mm_report` WHERE ( rid=81 ) LIMIT 1   [ RunTime:0.000393s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 9 ) LIMIT 1   [ RunTime:0.000472s ]
+SQL: SELECT * FROM `mm_movie` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000568s ]
+SQL: SELECT * FROM `mm_report` WHERE ( rid=80 ) LIMIT 1   [ RunTime:0.000605s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 9 ) LIMIT 1   [ RunTime:0.000444s ]
+SQL: SELECT * FROM `mm_movie` WHERE ( `id` = 32 ) LIMIT 1   [ RunTime:0.000355s ]
+SQL: SELECT * FROM `mm_report` WHERE ( rid=79 ) LIMIT 1   [ RunTime:0.000337s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000761s ]
+SQL: SELECT * FROM `mm_movie` WHERE ( `id` = 30 ) LIMIT 1   [ RunTime:0.000709s ]
+SQL: SELECT * FROM `mm_report` WHERE ( rid=78 ) LIMIT 1   [ RunTime:0.000375s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000402s ]
+SQL: SELECT * FROM `mm_movie` WHERE ( `id` = 31 ) LIMIT 1   [ RunTime:0.000400s ]
+SQL: SELECT * FROM `mm_report` WHERE ( rid=77 ) LIMIT 1   [ RunTime:0.000323s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000328s ]
+SQL: SELECT * FROM `mm_movie` WHERE ( `id` = 39 ) LIMIT 1   [ RunTime:0.000568s ]
+SQL: SELECT * FROM `mm_report` WHERE ( rid=76 ) LIMIT 1   [ RunTime:0.000489s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000550s ]
+SQL: SELECT * FROM `mm_movie` WHERE ( `id` = 39 ) LIMIT 1   [ RunTime:0.000670s ]
+SQL: SELECT * FROM `mm_report` WHERE ( rid=75 ) LIMIT 1   [ RunTime:0.000372s ]
+SQL: SELECT * FROM `mm_user` WHERE ( `id` = 8 ) LIMIT 1   [ RunTime:0.000432s ]
+SQL: SELECT * FROM `mm_movie` WHERE ( `id` = 35 ) LIMIT 1   [ RunTime:0.000616s ]
+SQL: SELECT * FROM `mm_report` WHERE ( rid=74 ) LIMIT 1   [ RunTime:0.000361s ]
+NOTIC: [8] Undefined variable: search F:\wamp\www\MyMovie\Admin\Lib\Action\CommonAction.class.php 第 277 行.
+NOTIC: [8] Undefined index: values F:\wamp\www\MyMovie\Admin\Lib\Action\CommonAction.class.php 第 278 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./Admin/Runtime/Cache\36398f075842cfe3894d207759b4c32ec76de77b.file.index.html.php F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./Admin/Runtime/Cache\36398f075842cfe3894d207759b4c32ec76de77b.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 32 行.
+NOTIC: [8] Undefined index: _sort F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 34 行.
+NOTIC: [8] Undefined index: keyword F:\wamp\www\MyMovie\Admin\Runtime\Cache\36398f075842cfe3894d207759b4c32ec76de77b.file.index.html.php 第 39 行.
+NOTIC: [8] Undefined index: status F:\wamp\www\MyMovie\Admin\Runtime\Cache\36398f075842cfe3894d207759b4c32ec76de77b.file.index.html.php 第 45 行.
+NOTIC: [8] Undefined index: status F:\wamp\www\MyMovie\Admin\Runtime\Cache\36398f075842cfe3894d207759b4c32ec76de77b.file.index.html.php 第 46 行.
+NOTIC: [8] Undefined index: status F:\wamp\www\MyMovie\Admin\Runtime\Cache\36398f075842cfe3894d207759b4c32ec76de77b.file.index.html.php 第 47 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\36398f075842cfe3894d207759b4c32ec76de77b.file.index.html.php 第 72 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\36398f075842cfe3894d207759b4c32ec76de77b.file.index.html.php 第 77 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\36398f075842cfe3894d207759b4c32ec76de77b.file.index.html.php 第 79 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\36398f075842cfe3894d207759b4c32ec76de77b.file.index.html.php 第 82 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.235877s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.236039s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000959s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000726s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000537s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000872s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003445s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000945s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001069s ]
+
+[ 2014-09-15T09:48:49+08:00 ] 127.0.0.1 /MyMovie/admin.php/User/index?_=1410745729474
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000952s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001109s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000905s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001059s ]
+SQL: SHOW COLUMNS FROM `mm_user` [ RunTime:0.007097s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_user` LIMIT 1   [ RunTime:0.000316s ]
+SQL: SELECT * FROM `mm_user` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000868s ]
+SQL: SHOW COLUMNS FROM `mm_ulevel` [ RunTime:0.007239s ]
+SQL: SELECT `levelname` FROM `mm_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000758s ]
+SQL: SELECT `levelname` FROM `mm_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000500s ]
+SQL: SELECT `levelname` FROM `mm_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000334s ]
+SQL: SELECT `levelname` FROM `mm_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000402s ]
+SQL: SELECT `levelname` FROM `mm_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000338s ]
+SQL: SELECT `levelname` FROM `mm_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000401s ]
+SQL: SELECT `levelname` FROM `mm_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000300s ]
+SQL: SELECT `levelname` FROM `mm_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000332s ]
+SQL: SELECT `levelname` FROM `mm_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000357s ]
+SQL: SELECT `levelname` FROM `mm_ulevel` WHERE ( level=1 ) LIMIT 1   [ RunTime:0.000391s ]
+NOTIC: [8] Undefined variable: search F:\wamp\www\MyMovie\Admin\Lib\Action\CommonAction.class.php 第 277 行.
+NOTIC: [8] Undefined index: values F:\wamp\www\MyMovie\Admin\Lib\Action\CommonAction.class.php 第 278 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./Admin/Runtime/Cache\8c8137347636d8b3c73abc5da7f1a10be248338e.file.index.html.php F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./Admin/Runtime/Cache\8c8137347636d8b3c73abc5da7f1a10be248338e.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 32 行.
+NOTIC: [8] Undefined index: _sort F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 34 行.
+NOTIC: [8] Undefined index: keyword F:\wamp\www\MyMovie\Admin\Runtime\Cache\8c8137347636d8b3c73abc5da7f1a10be248338e.file.index.html.php 第 40 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\8c8137347636d8b3c73abc5da7f1a10be248338e.file.index.html.php 第 64 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\8c8137347636d8b3c73abc5da7f1a10be248338e.file.index.html.php 第 70 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\8c8137347636d8b3c73abc5da7f1a10be248338e.file.index.html.php 第 72 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\8c8137347636d8b3c73abc5da7f1a10be248338e.file.index.html.php 第 74 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.191286s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.191428s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000692s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000538s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000399s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000597s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002485s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000650s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000733s ]
+
+[ 2014-09-15T09:48:54+08:00 ] 127.0.0.1 /MyMovie/admin.php/Notice/index?_=1410745734143
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001454s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001686s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001177s ]
+SQL: SHOW COLUMNS FROM `mm_notice` [ RunTime:0.005555s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mm_notice` LIMIT 1   [ RunTime:0.000326s ]
+SQL: SELECT * FROM `mm_notice` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000638s ]
+NOTIC: [8] Undefined variable: search F:\wamp\www\MyMovie\Admin\Lib\Action\CommonAction.class.php 第 277 行.
+NOTIC: [8] Undefined index: values F:\wamp\www\MyMovie\Admin\Lib\Action\CommonAction.class.php 第 278 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./Admin/Runtime/Cache\97d4388f749ecd4a45da5257b9f02e0ba759a60a.file.index.html.php F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./Admin/Runtime/Cache\97d4388f749ecd4a45da5257b9f02e0ba759a60a.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\97d4388f749ecd4a45da5257b9f02e0ba759a60a.file.index.html.php 第 36 行.
+NOTIC: [8] Undefined index: _sort F:\wamp\www\MyMovie\Admin\Runtime\Cache\97d4388f749ecd4a45da5257b9f02e0ba759a60a.file.index.html.php 第 38 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.190177s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.190311s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000851s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000549s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000381s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000635s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002694s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000668s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000758s ]
+
+[ 2014-09-15T09:48:56+08:00 ] 127.0.0.1 /MyMovie/admin.php/Ulevel/index?_=1410745735811
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000979s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001135s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000802s ]
+SQL: SHOW COLUMNS FROM `mm_ulevel` [ RunTime:0.011704s ]
+SQL: SELECT * FROM `mm_ulevel` ORDER BY level  [ RunTime:0.000934s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./Admin/Runtime/Cache\740a69bbdce1062de4e66e368696891cc3759d8f.file.index.html.php F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./Admin/Runtime/Cache\740a69bbdce1062de4e66e368696891cc3759d8f.file.index.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory F:\wamp\www\MyMovie\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: currentPage F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 28 行.
+NOTIC: [8] Trying to get property of non-object F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 28 行.
+NOTIC: [8] Undefined index: numPerPage F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 30 行.
+NOTIC: [8] Trying to get property of non-object F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 30 行.
+NOTIC: [8] Undefined index: _order F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 32 行.
+NOTIC: [8] Undefined index: _sort F:\wamp\www\MyMovie\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 34 行.
+NOTIC: [8] Undefined index: numPerPage F:\wamp\www\MyMovie\Admin\Runtime\Cache\740a69bbdce1062de4e66e368696891cc3759d8f.file.index.html.php 第 79 行.
+NOTIC: [8] Trying to get property of non-object F:\wamp\www\MyMovie\Admin\Runtime\Cache\740a69bbdce1062de4e66e368696891cc3759d8f.file.index.html.php 第 79 行.
+NOTIC: [8] Undefined index: numPerPage F:\wamp\www\MyMovie\Admin\Runtime\Cache\740a69bbdce1062de4e66e368696891cc3759d8f.file.index.html.php 第 80 行.
+NOTIC: [8] Trying to get property of non-object F:\wamp\www\MyMovie\Admin\Runtime\Cache\740a69bbdce1062de4e66e368696891cc3759d8f.file.index.html.php 第 80 行.
+NOTIC: [8] Undefined index: numPerPage F:\wamp\www\MyMovie\Admin\Runtime\Cache\740a69bbdce1062de4e66e368696891cc3759d8f.file.index.html.php 第 81 行.
+NOTIC: [8] Trying to get property of non-object F:\wamp\www\MyMovie\Admin\Runtime\Cache\740a69bbdce1062de4e66e368696891cc3759d8f.file.index.html.php 第 81 行.
+NOTIC: [8] Undefined index: numPerPage F:\wamp\www\MyMovie\Admin\Runtime\Cache\740a69bbdce1062de4e66e368696891cc3759d8f.file.index.html.php 第 82 行.
+NOTIC: [8] Trying to get property of non-object F:\wamp\www\MyMovie\Admin\Runtime\Cache\740a69bbdce1062de4e66e368696891cc3759d8f.file.index.html.php 第 82 行.
+NOTIC: [8] Undefined index: numPerPage F:\wamp\www\MyMovie\Admin\Runtime\Cache\740a69bbdce1062de4e66e368696891cc3759d8f.file.index.html.php 第 83 行.
+NOTIC: [8] Trying to get property of non-object F:\wamp\www\MyMovie\Admin\Runtime\Cache\740a69bbdce1062de4e66e368696891cc3759d8f.file.index.html.php 第 83 行.
+NOTIC: [8] Undefined index: totalCount F:\wamp\www\MyMovie\Admin\Runtime\Cache\740a69bbdce1062de4e66e368696891cc3759d8f.file.index.html.php 第 85 行.
+NOTIC: [8] Trying to get property of non-object F:\wamp\www\MyMovie\Admin\Runtime\Cache\740a69bbdce1062de4e66e368696891cc3759d8f.file.index.html.php 第 85 行.
+NOTIC: [8] Undefined index: totalCount F:\wamp\www\MyMovie\Admin\Runtime\Cache\740a69bbdce1062de4e66e368696891cc3759d8f.file.index.html.php 第 88 行.
+NOTIC: [8] Trying to get property of non-object F:\wamp\www\MyMovie\Admin\Runtime\Cache\740a69bbdce1062de4e66e368696891cc3759d8f.file.index.html.php 第 88 行.
+NOTIC: [8] Undefined index: numPerPage F:\wamp\www\MyMovie\Admin\Runtime\Cache\740a69bbdce1062de4e66e368696891cc3759d8f.file.index.html.php 第 89 行.
+NOTIC: [8] Trying to get property of non-object F:\wamp\www\MyMovie\Admin\Runtime\Cache\740a69bbdce1062de4e66e368696891cc3759d8f.file.index.html.php 第 89 行.
+NOTIC: [8] Undefined index: currentPage F:\wamp\www\MyMovie\Admin\Runtime\Cache\740a69bbdce1062de4e66e368696891cc3759d8f.file.index.html.php 第 90 行.
+NOTIC: [8] Trying to get property of non-object F:\wamp\www\MyMovie\Admin\Runtime\Cache\740a69bbdce1062de4e66e368696891cc3759d8f.file.index.html.php 第 90 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.149690s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.149866s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001105s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000806s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000589s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000937s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003840s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000827s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000966s ]
+

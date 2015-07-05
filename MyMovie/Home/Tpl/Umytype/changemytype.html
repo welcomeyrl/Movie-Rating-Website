@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>My Movie</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link href="__PUBLIC__/front/css/public.css" rel="stylesheet" type="text/css"/>
+		<link href="__PUBLIC__/front/css/bo.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="__PUBLIC__/front/js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/front/js/move.js"></script>
+		
+		<style>
+			select{
+				width:80px;height:200px;
+			}
+		</style>
+		<script type="text/javascript">
+			//负责移动两个下拉框中选项
+			function domove(a,b){
+				//先获取两个下拉框
+				var se1 = document.getElementById(a);
+				var se2 = document.getElementById(b);
+				
+				//alert(se1.length);
+				//遍历源下拉框中的所有下拉项
+				for(var i=0;i<se1.length;i++){
+					//判读是否已被选中
+					if(se1.options[i].selected){
+						//se1.options[i].selected=false;
+						//se2.add(new Option(se1.options[i].text));
+						se2.add(se1.options[i]);
+						//se2.options[i].selected=true;
+						i--;
+					}
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<!-- 页头开始 -->
+		{include file="Public/uhead.html"}
+		<!-- 页头结束 -->
+		
+		<!-- 主体部分开始	-->
+		<div id="pmain">
+		
+			<!-- 左侧内容 -->
+			<div id="pmain_left">
+
+				<!-- 用户资料修改 -->
+				<div class="prlist">
+					<div class="prlist_title">&nbsp;Select what the movie genre you like</div>
+					
+					<div class="typechoose">
+						<div id="typectitle">Please keep left box is selected with status of blue words and white background</div>
+						<div id="typelist">
+							<select size="12" multiple id="s1" >
+								{foreach $typelist as $type}
+									<option value="{$type.id}">{$type.typename}</option>
+								{/foreach}
+							</select>
+						</div>
+						
+						<div id="typemiddle"style="text-align:center;">
+							<br/><br/><br/>
+							<button class="btn-submit" onclick="domove('s1','s2')">>></button>
+							<br/><br/><br/>
+							<button class="btn-submit" onclick="domove('s2','s1')"><<</button>
+						</div>
+						
+						<div id="chooselist">
+							<form action="__APP__/Umytype/mytypechoose" method="post">
+								<select name="mytypechoose[]" size="12" multiple id="s2">
+									{foreach $mytypes as $mytype}
+										<option value="{$mytype.id}" selected>{$mytype.typename}</option>
+									{/foreach}
+								</select>
+							</div>
+								<br/><span style="margin-left:320px;"><span><input class="btn-submit" type="submit" value="Submit" />
+							</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 主体部分结束	-->
+		
+		<div class="nav"></div>
+		
+		<!-- 导入页脚部分 -->
+		{include file="Public/foot.html"}
+		
+		
+	</body>
+</html>
