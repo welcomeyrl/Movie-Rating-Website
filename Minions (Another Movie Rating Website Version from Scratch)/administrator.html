@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>      
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title> -administrator minions-</title>    
+        <meta name="description" content="wanna hve fun ? come to minions">
+        <meta name="keywords" content="movie review rating">            
+        <link rel="shortcut icon" type ="image/x-icon" href="myicon.ico" >
+        <link rel="stylesheet" href="administrator.css" type="text/css"/>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+         
+    </head>
+    <body>
+    	<div class="add">
+          <form  action="admi_add.php" method="post" target="_blank">
+          <label>name of movie</label>
+          <input name="title" type="text"  id="title" class="title" required="required">
+          <label>director of movie(no number)</label>
+          <input name="director" type="text"  id="director" class="director" required="required" pattern="^[a-zA-Z]+(([\'\,\.\- ][a-zA-Z ])?[a-zA-Z]*)*$">
+          <!--De La Hoya, or O'Doul-->
+          <label>actor(no number)</label>
+          <input name="actor" type="text"  id="actor" class="actor" required="required" pattern="^[a-zA-Z]+(([\'\,\.\- ][a-zA-Z ])?[a-zA-Z]*)*$">
+          <label>runtime(only number)</label>
+          <input name="runtime" type="text"  id="runtime" class="runtime" required="required" pattern="\d+">
+          <label>production year(4 digits only from 1900-2015)</label>
+          <input name="year" type="text"  id="year" class="year"  required="required" pattern="^(19[0-9][0-9]|200[0-9]|201[0-5])">
+           
+           <div class="genres" id="genres">
+          <label>genres(check one at least)</label>
+          
+          <input type="checkbox" name="genres[]" value="action" id="action"/>
+          <label>action</label>
+          <input type="checkbox" name="genres[]" value="adventure" id="adventure"/>
+          <label>adventure</label>
+          <input type="checkbox" name="genres[]" value="animation" id="animation"/>
+           <label>animation</label>
+          <input type="checkbox" name="genres[]" value="biography" id="biography"/>
+           <label>biography</label>
+          <input type="checkbox" name="genres[]" value="comedy" id="comedy"/>
+           <label>comedy</label>
+          <input type="checkbox" name="genres[]" value="crime" id="crime"/>
+           <label>crime</label>
+          <input type="checkbox" name="genres[]" value="documentary" id="documentary"/>
+           <label>documentary</label>
+          <input type="checkbox" name="genres[]" value="drama" id="drama"/>
+           <label>drama</label>
+          <input type="checkbox" name="genres[]" value="family" id="family"/>
+           <label>family</label>
+          <input type="checkbox" name="genres[]" value="fantasy" id="fantasy"/>
+           <label>fantasy</label>
+          <input type="checkbox" name="genres[]" value="film-noir" id="film-noir"/>
+           <label>film-noir</label>
+          <input type="checkbox" name="genres[]" value="history" id="history"/>
+           <label>history</label>
+          <input type="checkbox" name="genres[]" value="horror" id="horror"/>
+           <label>horror</label>
+          <input type="checkbox" name="genres[]" value="music" id="music"/>
+           <label>music</label>
+          <input type="checkbox" name="genres[]" value="musical" id="musical"/>
+           <label>musical</label>
+          <input type="checkbox" name="genres[]" value="mystery" id="mystery"/>
+           <label>mystery</label>
+          <input type="checkbox" name="genres[]" value="romance" id="romance"/>
+           <label>romance</label>
+          <input type="checkbox" name="genres[]" value="sci-fi" id="sci-fi"/>
+           <label>sci-fi</label>
+          <input type="checkbox" name="genres[]" value="sport" id="sport"/>
+           <label>sport</label>
+          <input type="checkbox" name="genres[]" value="thriller" id="thriller"/>
+           <label>thriller</label>
+          <input type="checkbox" name="genres[]" value="war" id="war"/>
+           <label>war</label>
+          <input type="checkbox" name="genres[]" value="western" id="western"/>
+           <label>western</label>
+           </div>
+
+          <label>trailer</label>
+          <input name="trailer" type="text"  id="trailer" class="trailer" required="required" >
+          <label>poster</label>
+          <input name="image" type="text"  id="image" class="image" required="required">
+          <label>language(character and comma only)</label>
+          <input name="language" type="text"  id="language" class="language" required="required" pattern="^[a-zA-Z]+(([\, ][a-zA-Z ])?[a-zA-Z]*)*$">
+          <label>storyline</label>
+          <input name="storyline" type="text"  id="storyline" class="storyline" required="required">   
+
+          <input type="submit" name="add" class="add-button" value="add" disabled>  
+     </form>
+
+     <div id="add-result">
+     </div>
+    	</div>
+
+    	<div class="delete">
+          <form  name="deleteform" id="deleteform" action="admi_delete.php" method="post" target="_blank">
+          <label>please input the name of movie</label>
+          <input name="moviename" type="text" class="moviename" id="moviename">
+          
+          <input type="submit" name="delete" class="delete-button" value="delete" >   
+          </form>
+        <div id="delete-result">
+        </div>
+    	</div>
+    	<div class="update">
+          <form   action="admi_update.php" method="post" novalidate target="_blank">
+          <label>please input the name of movie</label>
+          <input name="update-moviename" type="text" class="moviename" id="moviename">
+          <label>you want to change</label>
+           <select name="item" id="item" class="item" onchange="itemChange(this.value)">
+           <option value=""></option>
+		   <option value="1">title</option>
+		   <option value="2">director</option>
+		   <option value="3">actor</option>
+		   <option value="5">runtime</option>
+		   <option value="6">production_year</option>
+		   <option value="7">genres</option>
+		   <option value="9">trailer_name</option>
+		   <option value="10">image_name</option>
+		   <option value="11">movie_language</option>
+		   <option value="12">storyline</option>
+		   </select>
+
+		   <div id="hide" class="hide" >
+		   	<div id="update-number" class="update-number" style="display:none">
+		   	 <label>runtime(only number)</label>
+		    <input name="update-runtime" type="text"  id="runtime" class="runtime" required="required" pattern="\d+">
+            </div>
+            <div id="update-char" class="update-char" style="display:none">
+            <input name="update-director" type="text"  id="director" class="director" required="required" pattern="^[a-zA-Z]+(([\'\,\.\- ][a-zA-Z ])?[a-zA-Z]*)*$">
+            </div>
+             <div id="update-title" class="update-title" style="display:none">
+            <input name="update-title" type="text"  id="director" class="director" required="required" >
+            </div>
+            <div id="update-date" class="update-date" style="display:none">
+             <label>production year(4 digits only from 1900-2015)</label>	
+            <input name="update-year" type="text"  id="year" class="year"  required="required" pattern="^(19[0-9][0-9]|200[0-9]|201[0-5])">
+            </div>
+
+            <div class="update-genres" id="update-genres" style="display:none">
+          <label>genres(check one at least)</label>
+          <input type="checkbox" name="upgenres[]" value="action" id="action"/>
+          <label>action</label>
+          <input type="checkbox" name="upgenres[]" value="adventure" id="adventure"/>
+          <label>adventure</label>
+          <input type="checkbox" name="upgenres[]" value="animation" id="animation"/>
+           <label>animation</label>
+          <input type="checkbox" name="upgenres[]" value="biography" id="biography"/>
+           <label>biography</label>
+          <input type="checkbox" name="upgenres[]" value="comedy" id="comedy"/>
+           <label>comedy</label>
+          <input type="checkbox" name="upgenres[]" value="crime" id="crime"/>
+           <label>crime</label>
+          <input type="checkbox" name="upgenres[]" value="documentary" id="documentary"/>
+           <label>documentary</label>
+          <input type="checkbox" name="upgenres[]" value="drama" id="drama"/>
+           <label>drama</label>
+          <input type="checkbox" name="upgenres[]" value="family" id="family"/>
+           <label>family</label>
+          <input type="checkbox" name="upgenres[]" value="fantasy" id="fantasy"/>
+           <label>fantasy</label>
+          <input type="checkbox" name="upgenres[]" value="film-noir" id="film-noir"/>
+           <label>film-noir</label>
+          <input type="checkbox" name="upgenres[]" value="history" id="history"/>
+           <label>history</label>
+          <input type="checkbox" name="upgenres[]" value="horror" id="horror"/>
+           <label>horror</label>
+          <input type="checkbox" name="upgenres[]" value="music" id="music"/>
+           <label>music</label>
+          <input type="checkbox" name="upgenres[]" value="musical" id="musical"/>
+           <label>musical</label>
+          <input type="checkbox" name="upgenres[]" value="mystery" id="mystery"/>
+           <label>mystery</label>
+          <input type="checkbox" name="upgenres[]" value="romance" id="romance"/>
+           <label>romance</label>
+          <input type="checkbox" name="upgenres[]" value="sci-fi" id="sci-fi"/>
+           <label>sci-fi</label>
+          <input type="checkbox" name="upgenres[]" value="sport" id="sport"/>
+           <label>sport</label>
+          <input type="checkbox" name="upgenres[]" value="thriller" id="thriller"/>
+           <label>thriller</label>
+          <input type="checkbox" name="upgenres[]" value="war" id="war"/>
+           <label>war</label>
+          <input type="checkbox" name="upgenres[]" value="western" id="western"/>
+           <label>western</label>
+           </div>
+
+           </div>
+          <input type="submit" name="update" class="update-button" value="update" >   
+      </form>
+       <div id="update-result">
+       </div>
+
+    	</div>
+    	   <script type="text/javascript">
+          var checkboxes = $("input[type='checkbox']"),
+          submitButt = $("input[name='add']");
+
+          checkboxes.click(function() {
+               submitButt.attr("disabled", !checkboxes.is(":checked"));
+           });
+
+
+             </script>
+           <script type="text/javascript">
+            function itemChange(val) {
+             if(val==5)
+             {
+             	document.getElementById("update-number").style.display ="block";
+               document.getElementById("update-date").style.display="none";
+               document.getElementById("update-genres").style.display="none";
+               document.getElementById("update-char").style.display="none";
+                document.getElementById("update-title").style.display="none";
+
+             }
+             else if(val==6)
+             {
+                 document.getElementById("update-date").style.display ="block";
+                 document.getElementById("update-number").style.display="none";
+             
+               document.getElementById("update-genres").style.display="none";
+               document.getElementById("update-char").style.display="none";
+                document.getElementById("update-title").style.display="none";
+             }
+             else if(val==7)
+             {
+             	document.getElementById("update-genres").style.display ="block";
+             	document.getElementById("update-date").style.display="none";
+                 document.getElementById("update-number").style.display="none";
+               document.getElementById("update-char").style.display="none";
+                document.getElementById("update-title").style.display="none";
+                }
+             else if(val==2||val==3||val==11)
+             {
+             	document.getElementById("update-char").style.display ="block";
+             	document.getElementById("update-genres").style.display="none";
+             	document.getElementById("update-date").style.display="none";
+                 document.getElementById("update-number").style.display="none"; 
+                  document.getElementById("update-title").style.display="none";
+             }
+             else{
+             	 document.getElementById("update-title").style.display="block";
+             	document.getElementById("update-char").style.display ="none";
+             	document.getElementById("update-genres").style.display="none";
+             	document.getElementById("update-date").style.display="none";
+                 document.getElementById("update-number").style.display="none"; 
+             }
+            }
+           </script>
+           
+
+    </body>
+</html>

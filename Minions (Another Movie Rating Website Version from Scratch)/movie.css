@@ -1,0 +1,131 @@
+@CHARSET "UTF-8";
+
+
+
+body {
+	background: url('images/background.jpg');
+	background-attachment: fixed;
+}
+
+
+
+.wrapper {
+	width: 940px;
+	margin: 20px auto 20px auto;
+	border: 2px solid #000000;
+	background: url('images/wrapper_background.jpg');
+}
+
+header {
+	/* 				height:auto; */
+	height: 120px;
+	background-image: url("images/header.jpg");
+}
+
+h1 {
+	color: #ffcc66;
+	padding: 40px 0px 0px 40px;
+}
+
+footer {
+	clear: both;
+	color: #ffffff;
+	background-color: #aeaca8;
+	height: 40px;
+}
+
+nav {
+	clear: both;
+	color: #ffffff;
+	background-color: #aeaca8;
+	height: 40px;
+	/* 	padding: 20px 0px 0px 5px; */
+	/* 	margin: 120px 0px 0px 0px; */
+}
+
+nav ul {
+	margin: 0px 120px 5px 5px;
+	padding: 10px 0px 5px 30px;
+	padding: auto;
+}
+
+nav li {
+	display: inline;
+	margin-right: 40px;
+}
+
+nav li a {
+	color: #ffffff;
+}
+
+nav li a:hover, nav li a.current {
+	color: #000000;
+}
+
+#movie-poster img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	width: 319px;
+	height: 450px;
+}
+
+#storyline {
+	margin: auto 90px auto auto;
+}
+
+#review_input {
+	background-color: #ffff99;
+}
+
+#movie-info {
+	width: auto;
+	padding: 0px 0px 0px 20px;
+}
+
+#title {
+	font-family: 'Hoefler Text', Georgia, 'Times New Roman', serif;
+	font-weight: normal;
+	font-size: 1.75em;
+	letter-spacing: .2em;
+	line-height: 1.1em;
+	margin: 0px;
+	text-transform: uppercase;
+}
+
+.bullet {
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #600;
+	line-height: 22px;
+	margin: 0;
+	text-transform: uppercase;
+	letter-spacing: 1px
+}
+
+.content {
+	font-family: "Helvetica Neue", "Lucida Grande", Helvetica, Arial,
+		Verdana, sans-serif;
+	font-size: 14px;
+	margin-top: .5em;
+	color: #330000;
+}
+
+#info {
+	font-family: "Lucida Grande", Tahoma;
+	font-size: 10px;
+	font-weight: lighter;
+	font-variant: normal;
+	text-transform: uppercase;
+	color: #666666;
+	margin-top: 10px;
+	/* 	text-align: center !important; */
+	letter-spacing: 0.3em;
+}
+
+footer {
+	font-size: 80%;
+	padding: 7px 0px 0px 20px;
+}

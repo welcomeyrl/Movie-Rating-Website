@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>      
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title> -search minions-</title>    
+        <meta name="description" content="wanna hve fun ? come to minions">
+        <meta name="keywords" content="movie review rating">            
+        <link rel="shortcut icon" type ="image/x-icon" href="myicon.ico" >
+        <link rel="stylesheet" href="search.css" type="text/css"/>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="search.js"></script>  
+              <script type="text/javascript">
+    
+        function show(value1, value2, value3)
+        {   
+            if (window.XMLHttpRequest)
+            {
+                // Create the object for browsers
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {
+                // Create the object for browser versions prior to IE 7
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                // if server is ready with the response
+                if (xmlhttp.readyState==4) 
+                {
+                    // if everything is Ok on browser
+                    if(xmlhttp.status==200) 
+                    {    
+                        //Update the div with the response
+                     //   var response=xmlhttp.responseText;
+                        document.getElementById("main-search").innerHTML=xmlhttp.responseText;
+                    //    var update= new Array();
+                    //    if(response.indexOf('|$|'!= -1)) {
+                   //     update = response.split('|$|');
+                 
+                    //    document.getElementById("rankingf").innerHTML=update[0];// txtHint should be the Id of an text box I assume
+                    //    document.getElementById("rankingm").innerHTML=update[1];// similar to above comment
+                   //    }
+                    }
+                }
+            }
+            //send the selected option id to the php page 
+          //  var str=value1+'-'+value2+'-'+value3;
+           xmlhttp.open("GET","search.php?q="+value1+"&y="+value2+"&z="+value3,true);
+          // xmlhttp.open("GET","searchwindow.php?q=saving",true);
+            xmlhttp.send();
+        }
+
+ function search(value1)
+        {   
+            if (window.XMLHttpRequest)
+            {
+                // Create the object for browsers
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {
+                // Create the object for browser versions prior to IE 7
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                // if server is ready with the response
+                if (xmlhttp.readyState==4) 
+                {
+                    // if everything is Ok on browser
+                    if(xmlhttp.status==200) 
+                    {    
+                        //Update the div with the response
+                     //   var response=xmlhttp.responseText;
+                        document.getElementById("main-search").innerHTML=xmlhttp.responseText;
+                    //    var update= new Array();
+                    //    if(response.indexOf('|$|'!= -1)) {
+                   //     update = response.split('|$|');
+                 
+                    //    document.getElementById("rankingf").innerHTML=update[0];// txtHint should be the Id of an text box I assume
+                    //    document.getElementById("rankingm").innerHTML=update[1];// similar to above comment
+                   //    }
+                    }
+                }
+            }
+            //send the selected option id to the php page 
+          //  var str=value1+'-'+value2+'-'+value3;
+           //xmlhttp.open("GET","search.php?q="+value1+"&y="+value2+"&z="+value3,true);
+           xmlhttp.open("GET","searchwindow.php?x=" + value1,true);
+            xmlhttp.send();
+        }
+         
+
+      </script>
+      
+    </head>
+    <body>
+        
+      <div class="menu">
+    <ul >
+     <!--   <li id="menu_login" class="menu_login" >            
+           <a class="login" href="login_regis.html#tologin"><font color="white">login</font></a>           
+        </li>
+        <li id="menu_register" class="menu_register" >
+          <a class="register" href="login_regis.html#toregister"><font color="white">register</font></a> 
+        </li>-->
+    </ul>
+    </div>
+
+   
+   <div class="search">
+   <div class="search-l">    <!--change to three form-->
+    <div class="forms">
+    <div class="category">
+    <form>
+        <select id="selectcategory" class="selectcategory">
+        <option value="all">please select category</option>
+        <option value="drama">drama</option>
+        <option value="comedy">comedy</option>
+        <option value="action">action</option>
+        <option value="thriller">thriller</option>
+        <option value="fantasy">fantasy</option>
+        <option value="romance">romance</option>
+        <option value="music">music</option>
+        <option value="sci_fi">sci_fi</option>
+        <option value="mystery">mystery</option>
+        <option value="crime">crime</option>
+        </select>
+    </form> 
+    </div>
+    <div class="country">
+     <form>
+        <select id="selectcountry" class="selectcountry">
+        <option value="all">please select language</option>
+        <option value="Cantonese">Cantonese</option>
+        <option value="Mandarin">Mandarin</option>
+        <option value="English">English</option>
+        <option value="French">French</option>
+        </select>
+    </form> 
+    </div>
+    <div class="year">
+     <form>
+        <select id="selectyear" class="selectyear">
+        <option value="0">please select year</option>
+        <option value="2010">after 2010</option>
+        <option value="2000">2000-2010</option>
+        <option value="1990">1990-2000</option>
+        <option value="1980">1980-1990</option>
+        </select>
+    </form> 
+    </div>
+    </div>
+    <div class="searchit">
+     <input type="submit" class="submit" onclick="show(selectcategory.value, selectcountry.value, selectyear.value)">  
+    </div>
+   </div>
+    <div class="search-r"> 
+             <div class="search-window"> <!--another window-->
+                        <form  name="formsearch" id="searchform" >
+                        <input name="keyword" type="text" class="keyword" id="keyword">
+                        </form>
+                    <!--<button type="submit" name="submit" class="search-submit" value="submit" onclick="search()">search</button>-->
+                        <input type="submit" name="submit" class="search-submit" value="submit" onclick="search(keyword.value)">            
+            </div> 
+            <div class="main-search" id="main-search">
+
+            </div>
+    </div>
+   </div>
+<!--       
+    <div class="search-main-inner">
+<div class="fcname">
+    <ul class="n_num">
+        <li><a type="comprehensive">综合</a></li>
+        <li><a type="video">视频</a></li>
+        <li><a type="series">剧集</a></li>
+        <li><a type="special">专题</a></li>
+        <li><a type="up">UP主</a></li>
+    </ul>
+</div>
+<script type="text/javascript">
+    $(".fcname a").each(function (k,v){
+        if($(v).attr("type")==$('input[name="type"]').val())
+        {
+            $(v).parent().addClass('on');
+        }
+    });
+    $(".fcname a").click(function(event) {
+        $('input[name="type"]').val($(this).attr("type"));
+        $('#searchform').submit();
+    });
+    $("#searchform").attr("target", "");
+    var getKeyword="韩剧BLOOD";
+    if(typeof(history.replaceState)=="function")
+    {
+        var locaUrl=window.location.href;
+        var seidIndex=window.location.href.indexOf("seid");
+        if(seidIndex>=0)
+        {   
+            var replaceStr=locaUrl.substring(seidIndex,locaUrl.length);
+            locaUrl=locaUrl.replace(replaceStr,"seid=");
+            history.replaceState("200","",locaUrl);
+        }
+        else
+        {
+            history.replaceState("200","",locaUrl+"&seid=");
+        }
+       
+
+    }
+    $("#search_keyword").val(getKeyword);
+    </script>          
+        </div>
+    -->
+    </body>
+</html>
